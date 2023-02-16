@@ -1,0 +1,86 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Lato&family=Montserrat&family=Roboto&display=swap");
+
+/* primary colors and sections */
+
+:root {
+  --primary-color: #f00;
+  --secondary-color: #000;
+  --third-color: #555;
+  --background-color: #fff;
+  --shadow-color: #4a4a4a;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--shadow-color);
+}
+
+.nav-brand-logo {
+  height: 3rem;
+  width: 3rem;
+}
+
+/* ------------------------------------------------------- */
+
+.fa-brands {
+  border-radius: 30%;
+  background-color: var(--primary-color);
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: var(--shadow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.fa-brands:hover {
+  color: var(--primary-color);
+  background-color: var(--shadow-color);
+}
+
+.footer-rights {
+  color: var(--background-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.rights-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.rights-link:hover {
+  color: var(--background-color);
+}
