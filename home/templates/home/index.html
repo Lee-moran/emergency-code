@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_meta %}
+{% endblock %}
+
+{% block extra_title %}Home |{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+    <div class="container-fluid home-hero">
+        <div class="col-12 text-center">
+            <h2 class="display-4 text-white pt-5">This is our call to action text area</h2>
+        </div>
+    </div>
+
 {% endblock %}

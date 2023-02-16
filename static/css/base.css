@@ -27,6 +27,7 @@ main {
 
 body {
   background-color: var(--background-color);
+  /* background-color: red; */
 }
 
 a {
@@ -83,4 +84,14 @@ footer {
 
 .rights-link:hover {
   color: var(--background-color);
+}
+
+/* -------------------------------- Hero Section Styling */
+.home-hero {
+  background-image: url('/media/hand-hero.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 48rem;
+  width: 100%;
 }
