@@ -20,6 +20,8 @@
     --third-color: #555;
     --background-color: #fff;
     --shadow-color: #4a4a4a;
+    --box-shadow: 8px 8px 8px rgba(0,0,0,0.6),
+                  8px 8px 35px rgba(255,255,255,0.3);
 }
 
 main {
@@ -97,4 +99,16 @@ footer {
 
 .text-blue {
     color: #1848f1;
+}
+
+/* -------------------------------- Categories Cards Styling */
+.card-alt {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    border: 10px solid var(--clr);
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0, 0, 0, 0.1),
+                -10px -10px 10px rgba(255, 255, 255, 0.2) inset,
+                15px 15px 15px rgba(0, 0, 0, 0.1) inset;
 }
