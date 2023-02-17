@@ -122,3 +122,11 @@ footer {
                 -10px -10px 10px rgba(255, 255, 255, 0.2) inset,
                 15px 15px 15px rgba(0, 0, 0, 0.1) inset;
 }
+
+/* -------------------------------- NGOs Page Styling */
+.ngo-img {
+    display: flex;
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem auto;
+}
