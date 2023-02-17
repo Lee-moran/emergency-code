@@ -30,6 +30,9 @@
 
 ---
 ## Project Overview
+SupportNGOs is a multi-brand, ecommerce full stack project built using Django, Python, JavaScript and Bootstrap 4. The site is deployed to Heroku, 
+SupportNGOs is a RealEstate site that links the consumer to the major NGO catergories. Where a user can select the prefered category donate to that prefered charity. 
+
 
 ## User Experience
 
@@ -40,6 +43,20 @@
 ### Structure Plane
 
 ### Skeleton Plane
+
+### Fonts and color
+
+Exo, Roboto, and Montserrat are popular font choices for a variety of design projects due to their versatility and readability. 
+Exo is a modern sans-serif font that has a clean and futuristic look, making it suitable for technology-based designs. 
+Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials. 
+Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel. 
+
+Additionally, all three fonts have a range of weights and styles that allow for flexibility in design, making them suitable for a variety of projects. Whether it's for a website, logo, or printed material, Exo, Roboto, and Montserrat are excellent choices for designers looking for fonts that are modern, versatile, and highly readable.
+
+An earth color scheme is an excellent choice for NGOs, as it communicates the organization's connection to nature and the environment. Using colors such as brown, green, and blue creates a warm and inviting palette that reflects the organization's values and mission.
+Brown, as a grounding color, symbolizes stability and dependability, making it an ideal choice for an NGO that aims to make a lasting impact on the environment. 
+Green, on the other hand, is associated with growth and vitality, and it represents the NGO's commitment to sustainability and the protection of natural resources. 
+Blue is a calming color that is often used to represent water, making it a great choice for an organization that focuses on protecting oceans, rivers, and other bodies of water. Together, these colors create a cohesive and natural color scheme that is visually appealing and emotionally resonant. By using an earth color scheme, NGOs can connect with their target audience and communicate their commitment to environmental preservation and sustainable development.
 
 ### Surface Plane
 
