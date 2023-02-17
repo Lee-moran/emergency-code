@@ -43,8 +43,13 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
+    'django_summernote',
+    'NGOBlog',
     'ngos',
+    'ckeditor',
 
+    # Other
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +63,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'emergency_code.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -73,10 +80,19 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # req by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
+
+# additional requirements to store messages in the session due to use of GitPod
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
