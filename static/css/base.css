@@ -49,7 +49,7 @@ footer {
 
 /* ------------------------------------------------------- Footer  */
 
-.social-networks{
+.social-networks3{
   margin-bottom: 0;
 }
 
@@ -83,7 +83,7 @@ footer {
   -o-transition: all 0.5s ease-in-out;
 }
 
-.team-members{
+.team-members {
   margin-top: 5px;
   font-size: 1rem;
   font-weight: 600;
@@ -91,7 +91,8 @@ footer {
   color: var(--primary-color);
   text-transform: uppercase;
 }
-.team-members:hover{
+
+.team-members:hover {
   color: #fff;
 }
 
@@ -104,10 +105,10 @@ footer {
 .rights-link {
   text-decoration: none;
   color: var(--primary-color);
-  transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 
 .rights-link:hover {
