@@ -15,9 +15,9 @@
 /* primary colors and sections */
 
 :root {
-    --primary-color: rgb(22, 115, 208);
-    --secondary-color: #000;
-    --third-color: #555;
+    --primary-color: #02a4db;
+    --secondary-color: #1e982d;
+    --third-color: #e3aa60;
     --background-color: #fff;
     --shadow-color: #4a4a4a;
     --box-shadow: 8px 8px 8px rgba(0,0,0,0.6),
@@ -47,48 +47,77 @@ footer {
     width: 3rem;
 }
 
-/* ------------------------------------------------------- */
+/* ------------------------------------------------------- Footer  */
+
+.social-networks{
+  margin-bottom: 0;
+}
+
 
 .fa-brands {
-    border-radius: 30%;
-    background-color: var(--primary-color);
-    width: 3rem;
-    height: 3rem;
-    font-size: 2rem;
-    margin-top: 1rem;
-    color: var(--shadow-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+  border-radius: 30%;
+  background-color: var(--primary-color);
+  margin: 0 10px;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  color: var(--shadow-color);
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .fa-brands:hover {
-    color: var(--primary-color);
-    background-color: var(--shadow-color);
+  color:  #fff;
+  background-color: var(--shadow-color);
+  text-decoration: none;
+  border: 3px  #fff solid;
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.team-members{
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+.team-members:hover{
+  color: #fff;
 }
 
 .footer-rights {
-    color: var(--background-color);
-    padding-top: 10px;
-    padding-bottom: 10px;
+  color: var(--background-color);
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .rights-link {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
 }
 
 .rights-link:hover {
-    color: var(--background-color);
+  color: var(--background-color);
 }
+
+a {
+  text-decoration: none !important;
+}
+
 
 /* -------------------------------- Hero Section Styling */
 .carousel-img {
@@ -122,3 +151,4 @@ footer {
                 -10px -10px 10px rgba(255, 255, 255, 0.2) inset,
                 15px 15px 15px rgba(0, 0, 0, 0.1) inset;
 }
+
