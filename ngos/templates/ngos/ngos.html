@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+    <meta name="description" property="og:description" content="">
+    <meta name="keywords" content="Support NGOs, World NGO Day, non-governmental organization">
+
+    {% comment %} Essential Meta Tags for Social Media - Facebook and Twitter {% endcomment %}
+    <meta property="og:title" content="Home | SupportNGOs">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt"
+        content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    {% comment %} Non-Essential but Recommended Meta Tags {% endcomment %}
+    <meta property="og:description"
+        content="">
+    <meta property="og:site_name" content="Support NGOs">
+    <meta name="twitter:image:alt"
+        content="">
+{% endblock %}
+
+{% block extra_title %}NGOs |{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div class="col text-center mt-1">
+            <h2 class="display-4 brand-font text-black text-center my-5">View All NGOs</h2>
+        </div>
+        <!-- List of all listed NGOs -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-5 mb-5">
+            {% for n in nongovernmentorgs %}
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <a href="">
+                        <img class="card-img-top img-fluid brand-image" src="{{ n.image.url }}" alt="{{ n.name }}">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

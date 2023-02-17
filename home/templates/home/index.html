@@ -2,23 +2,101 @@
 {% load static %}
 
 {% block extra_meta %}
+    <meta name="description" property="og:description" content="">
+    <meta name="keywords" content="Support NGOs, World NGO Day, non-governmental organization">
+
+    {% comment %} Essential Meta Tags for Social Media - Facebook and Twitter {% endcomment %}
+    <meta property="og:title" content="Home | SupportNGOs">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt"
+        content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    {% comment %} Non-Essential but Recommended Meta Tags {% endcomment %}
+    <meta property="og:description"
+        content="">
+    <meta property="og:site_name" content="Support NGOs">
+    <meta name="twitter:image:alt"
+        content="">
 {% endblock %}
 
 {% block extra_title %}Home |{% endblock %}
 
 {% block page_header %}
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
             <div class="col"></div>
         </div>
-    </div>
+    </div> -->
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid home-hero">
-        <div class="col-12 text-center">
-            <h2 class="display-4 text-white pt-5">This is our call to action text area</h2>
+    <!-- CAROUSEL AREA -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/hand-hero.webp' %}" class="d-block carousel-img w-100" alt="Syria-Turkey Earthquake appeal">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 text-red font-weight-bold">Turkey-Syria Earthquake Appeal</h2>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/syria-appeal.webp' %}" class="d-block carousel-img w-100" alt="Syria-Turkey Earthquake appeal">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 text-red font-weight-bold">Turkey-Syria Earthquake Appeal</h2>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/support-children-img.webp' %}" class="d-block carousel-img w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 text-red font-weight-bold">Emergency Appeal</h2>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/support-ukraine-img.webp' %}" class="d-block carousel-img w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4 text-red font-weight-bold">Ukraine Appeal</h2>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
     </div>
+
+    <!-- NGO CATEGORIES AREA -->
+    <div class="text-center mt-5">
+            <h3 class="display-4 pb-3">Find the NGOs You Wish to Support</h3>
+    </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-3 my-3">
+            {% for category in categories %}
+            <div class="col mb-4">
+                <div class="card h-100 card-alt">
+                    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ category.friendly_name }}</h5>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
 
 {% endblock %}

@@ -1,10 +1,11 @@
 @charset "utf-8";
+
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 /* google fonts */
@@ -14,84 +15,110 @@
 /* primary colors and sections */
 
 :root {
-  --primary-color: rgb(22, 115, 208);
-  --secondary-color: #000;
-  --third-color: #555;
-  --background-color: #fff;
-  --shadow-color: #4a4a4a;
+    --primary-color: rgb(22, 115, 208);
+    --secondary-color: #000;
+    --third-color: #555;
+    --background-color: #fff;
+    --shadow-color: #4a4a4a;
+    --box-shadow: 8px 8px 8px rgba(0,0,0,0.6),
+                  8px 8px 35px rgba(255,255,255,0.3);
 }
 
 main {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 body {
-  background-color: var(--background-color);
-  /* background-color: red; */
+    background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+    color: #34383c;
 }
 
 footer {
-  background-color: var(--shadow-color);
+    background-color: var(--shadow-color);
 }
 
 .nav-brand-logo {
-  height: 3rem;
-  width: 3rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 /* ------------------------------------------------------- */
 
 .fa-brands {
-  border-radius: 30%;
-  background-color: var(--primary-color);
-  width: 3rem;
-  height: 3rem;
-  font-size: 2rem;
-  margin-top: 1rem;
-  color: var(--shadow-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+    border-radius: 30%;
+    background-color: var(--primary-color);
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    color: var(--shadow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .fa-brands:hover {
-  color: var(--primary-color);
-  background-color: var(--shadow-color);
+    color: var(--primary-color);
+    background-color: var(--shadow-color);
 }
 
 .footer-rights {
-  color: var(--background-color);
-  padding-top: 10px;
-  padding-bottom: 10px;
+    color: var(--background-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .rights-link {
-  text-decoration: none;
-  color: var(--primary-color);
-  transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 
 .rights-link:hover {
-  color: var(--background-color);
+    color: var(--background-color);
 }
 
 /* -------------------------------- Hero Section Styling */
-.home-hero {
-  background-image: url('/media/hand-hero.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 48rem;
-  width: 100%;
+.carousel-img {
+    height: 38rem;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+.text-blue {
+    color: #1848f1;
+}
+
+.appeal-message {
+    display: flex;
+    justify-content: center;
+    align-items:first baseline;
+    margin: 2rem auto;
+    color: var(--primary-color);
+}
+
+/* -------------------------------- Categories Cards Styling */
+.card-alt {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    border: 10px solid var(--clr);
+    box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0, 0, 0, 0.1),
+                -10px -10px 10px rgba(255, 255, 255, 0.2) inset,
+                15px 15px 15px rgba(0, 0, 0, 0.1) inset;
 }
