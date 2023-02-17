@@ -87,11 +87,6 @@ footer {
 }
 
 /* -------------------------------- Hero Section Styling */
-.home-hero {
-  background-image: url('/media/hand-hero.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 48rem;
-  width: 100%;
+.carousel-img {
+  height: 38rem;
 }
