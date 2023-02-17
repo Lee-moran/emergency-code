@@ -5,7 +5,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.utils.text import slugify
 from .models import Post
-from .forms import CommentForm, PostForm
+from .forms import CommentForm, PostForm, UpdatePostForm
 
 
 def index(request):
@@ -88,3 +88,60 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class PostLike(View):
+    """Remove or add like and redirect to post_detail.html"""
+    def post(self, request, slug, *args, **kwargs):
+        """With this function user can like or remove its like"""
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class AddPostView(LoginRequiredMixin, generic.CreateView):
+    """Allow users to post"""
+    model = Post
+    form_class = PostForm
+    template_name = 'add_post.html'
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.cleaned_data['title'])
+        return super(AddPostView, self).form_valid(form)
+
+
+class UpdatePostView(UserPassesTestMixin, generic.UpdateView):
+    """Allow user to update their posts"""
+    model = Post
+    template_name = 'update_post.html'
+    form_class = UpdatePostForm
+
+    def test_func(self):
+        logged_in_user = self.request.user
+        current_ticket = self.get_object()
+
+        if current_ticket.author == logged_in_user:
+            return True
+        else:
+            return False
+
+
+class DeletePostView(UserPassesTestMixin, generic.DeleteView):
+    """Allow user to delete post"""
+    model = Post
+    template_name = 'delete_post.html'
+    success_url = reverse_lazy('blogs')
+
+    def test_func(self):
+        logged_in_user = self.request.user
+        current_ticket = self.get_object()
+
+        if current_ticket.author == logged_in_user:
+            return True
+        else:
+            return False

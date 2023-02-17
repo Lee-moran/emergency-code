@@ -14,10 +14,10 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
+                {% if "placeholder" in # %}
                 <img src="{% static 'images/drink.JPG' %}" width="100%" alt="picture with a drink">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%" alt="picture added by user">
+                <img src="#" width="100%" alt="picture added by user">
                 {% endif %}
             </div>
         </div>

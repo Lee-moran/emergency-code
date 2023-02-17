@@ -28,3 +28,24 @@ class PostForm(forms.ModelForm):
                                              'This is the message space,'
                                              ' please be respectfully!'}),
         }
+
+
+class UpdatePostForm(forms.ModelForm):
+    """Allow user to update their post"""
+    class Meta:
+        """Allow user to have access just to certain fields"""
+        model = Post
+        fields = ('title',
+                  'content')
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class':
+                                            'form-control',
+                                            'placeholder':
+                                            'This is the blog title'}),
+            'content': forms.Textarea(attrs={'class':
+                                             'form-control',
+                                             'placeholder':
+                                             'This is the message space,'
+                                             'please be respectfully!'}),
+        }

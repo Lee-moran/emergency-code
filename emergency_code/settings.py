@@ -43,10 +43,10 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
-    'NGOBlog',
     'django_summernote',
+    'NGOBlog',
     'ngos',
-
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
