@@ -9,7 +9,6 @@ def all_ngos(request):
     """
 
     nongovernmentorgs = NonGovernmentOrg.objects.all()
-
     context = {
         'nongovernmentorgs': nongovernmentorgs,
     }

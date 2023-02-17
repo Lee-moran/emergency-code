@@ -30,10 +30,12 @@ main {
 
 body {
     background-color: var(--background-color);
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
+    color: #34383c;
 }
 
 footer {
@@ -99,6 +101,14 @@ footer {
 
 .text-blue {
     color: #1848f1;
+}
+
+.appeal-message {
+    display: flex;
+    justify-content: center;
+    align-items:first baseline;
+    margin: 2rem auto;
+    color: var(--primary-color);
 }
 
 /* -------------------------------- Categories Cards Styling */
