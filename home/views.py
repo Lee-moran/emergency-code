@@ -1,4 +1,6 @@
 from django.shortcuts import render
+<<<<<<< HEAD
+<<<<<<< HEAD
 from ngos.models import Category
 import re
 from django.views.generic import TemplateView
@@ -13,6 +15,12 @@ from django.views import generic
 from django.views.generic import DetailView
 from .models import SubscribedUsers, Profile
 from .forms import EditProfileForm, PasswordChangingForm
+=======
+from ngos.models import Category, NonGovernmentOrg
+>>>>>>> fb7f8b4 (added category or causes and NGOs filtering and sorting)
+=======
+from ngos.models import Category
+>>>>>>> fd062d5 (added ngo detail views, urls and template)
 
 
 def index(request):
