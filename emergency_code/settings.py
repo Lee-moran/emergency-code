@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'ngos',
     'ckeditor',
     'profiles',
+    
 
     # Other
     'crispy_forms',
