@@ -24,7 +24,7 @@
                                 <div class="image-container">
                                     <!--We will implement a holder for post without an image-->
                                     {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top" src="{% static 'images/holdr.JPG' %}"
+                                    <img class="card-img-top" src="{% static 'images/pholdb.webp' %}"
                                         alt="This is a placeholder image">
                                     {% else %}
                                     <img class="card-img-top" src=" {{ post.featured_image.url }}"

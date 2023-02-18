@@ -10,14 +10,15 @@
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle" style="color: white; background-color: #8500C7;">{{ post.author }} | {{ post.created_on }}</p>
+                <p class="post-subtitle" style="color: white; background-color: #0004ff;">{{ post.author }} |
+                    {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in # %}
-                <img src="{% static 'images/drink.JPG' %}" width="100%" alt="picture with a drink">
+                {% if "placeholder" in post.featured_image.url %}
+                <img src="{{ post.featured_image.url }}" width="100%" alt="picture added by user">
                 {% else %}
-                <img src="#" width="100%" alt="picture added by user">
+                <img src="{% static 'images/pholdb.webp' %}" width="100%" alt="placeholder">
                 {% endif %}
             </div>
         </div>
@@ -41,9 +42,11 @@
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="bi bi-heart-fill"></i></button>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i class="bi bi-heart-fill"></i></button>
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="bi bi-heart-fill"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
@@ -85,7 +88,8 @@
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {% if comment.user.profile.profile_pic %}
-                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle" alt="User profile picture">
+                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle"
+                            alt="User profile picture">
                         {% else %}
                         <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
                         {% endif %}
