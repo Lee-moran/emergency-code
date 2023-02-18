@@ -75,8 +75,8 @@
             <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
             {% endif %}
             {% if user.is_authenticated %}
-            <li><a class="dropdown-item" href="#">View Profile</a></li>
-            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+            <li><a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">View Profile</a></li>
+            <li><a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Edit Profile</a></li>
             <li><a class="dropdown-item" href="{% url 'account_email' %}">Change E-mail</a></li>
             <li><a class="dropdown-item" href="{% url 'edit_profile' %}">Account Settings</a></li>
             <li><a class="dropdown-item" href="{% url 'account_logout' %}"><strong>Logout</strong></a></li>
