@@ -8,9 +8,11 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                 <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
+                <h1 class="post-title" style="
+                padding: 80px;
+            ">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle" style="color: white; background-color: #0004ff;">{{ post.author }} |
+                <p class="post-subtitle" style="color: white;">{{ post.author }} |
                     {{ post.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
@@ -31,12 +33,12 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
+                <p class="card-text">
                     {{ post.content | safe }}
                 </p>
                 <div class="row">
 
-                    <div class="col-4">
+                    <div class="col-4 text-center">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
@@ -56,7 +58,7 @@
                             <span class="text-secondary">{{ post.number_of_likes }} </span>
                         </strong>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 text-center">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="bi bi-chat-left"></i></i>
                             <!-- Our total_comments variable goes before the closing strong tag -->
@@ -68,9 +70,9 @@
         </div>
     </div>
     <div class="text-center">
-        <small><a href="{% url 'update_post' post.pk %}" class="editpost">Edit Post <i
+        <small><a href="{% url 'update_post' post.pk %}" class="editpost btn btn-success">Edit Post <i
                     class="bi bi-pencil-square"></i></a></small>
-        <small><a href="{% url 'delete_post' post.pk %}" class="deletepost">Delete Post <i
+        <small><a href="{% url 'delete_post' post.pk %}" class="deletepost btn btn-danger">Delete Post <i
                     class="bi bi-trash"></i></a></small>
     </div>
     <div class="row">
@@ -79,19 +81,19 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+        <div class="col-md-12 card mb-12  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comments shadow p-2 mb-2 bg-white" style="padding: 10px;border-radius: 35px;">
-                    <p class="font-weight-bold">
+                <div class="comments shadow p-2 mb-2 bg-white" style="padding: 10px;border-radius: 15px;">
+                    <p>
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {% if comment.user.profile.profile_pic %}
-                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle"
+                        <img src="{{ comment.user.profile.profile_pic.url }}" width=30 height=30 class="rounded-circle"
                             alt="User profile picture">
                         {% else %}
-                        <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
+                        <img src="{% static 'images/defaultpic.jpeg' %}" width=30 height=30 alt="Default Picture">
                         {% endif %}
                         {{ comment.name }}
                         <a href="{% url 'show_profile_page' comment.user.profile.id %}"><i class="bi bi-book-fill"
@@ -100,14 +102,13 @@
                         {{ comment.created_on }}</span> wrote:
                     </p>
                     <!-- The body of the comment -->
-
                     {{ comment.body | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
+        <div class="col-md-12 card mb-12  mt-2 mb-4">
             <div class="card-body" style="margin-left: 1px;margin-top: 1px;">
                 <!-- Once a user plans to leave a comment this will be send for approval, and the comment will be visible after it has been approved.  -->
                 {% if commented %}
@@ -117,21 +118,18 @@
                 {% else %}
                 {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <p>Post a comment as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-dark" style="
+                    float: right;
+                ">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}
             </div>
         </div>
-        <!--History for the page-->
-        <p>**<em><i class="bi bi-book-fill" style="
-            color: #E84610;
-        "></i> - By clicking this you will be directed to this person profile...</em></p>
     </div>
 </div>
 

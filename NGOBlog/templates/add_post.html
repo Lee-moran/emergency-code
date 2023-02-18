@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
-{% block title %}Create a new blog post | Finesse{% endblock %}
+{% block title %}Add POST{% endblock %}
 {% load static %}
 
 {% block content %}
 {% if user.is_authenticated %}
 <!--If the user is authenticated he can add a post in the Blog section-->
-    <h1>Add Post</h1>
-    <br/> <br/>
+<h1 class="text-center m-3" style="
+    color: #07430c;
+"><strong><em>Create a post for our blog!</em></strong></h1>
+<br /> <br />
 
-    <div class="ms-5">
-        <strong>Rules:</strong>
-        <br>
-        <em>
+<div class="ml-5">
+    <strong>Rules:</strong>
+    <br>
+    <em>
         <small>1. After clicking the Post button, your post will be directed to the admins to be approved.</small>
         <br>
         <small>2. Please don't use punctuation in the title, we prefer just plain text. We are cool.</small>
@@ -21,14 +23,14 @@
         <small>4. Your post can be approved in maximum 24h.</small>
         <br>
         <small> Have fun! Let's get social!</small>
-        </em>
-    </div>
-    <div class="form-group m-5">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-signup btn-lg">Post</button>
-        </form>
-    </div>
+    </em>
+</div>
+<div class="form-group m-5">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-signup btn-lg">Post</button>
+    </form>
+</div>
 {% endif %}
 {% endblock %}
