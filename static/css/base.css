@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     font-family: "Roboto", sans-serif;
 }
 
@@ -38,19 +38,135 @@ a {
     color: #34383c;
 }
 
-footer {
-    background-color: var(--shadow-color);
+/* ------------------------------------------------------- NavBar  */
+.nav-item {
+margin: 0 0.2rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  border-radius: 0;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  color: var(--secondary-color);
+  padding-left: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-left: solid 0.25rem var(--secondary-color);
+  border-bottom: solid 0.25rem var(--primary-color);
 }
 
 .nav-brand-logo {
-    height: 3rem;
-    width: 3rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+.brand-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;  
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.glass-container {
+padding-top: 0.5rem;
+}
+
+.searchbutton {
+  margin-bottom: 0;
+}
+
+.heart-icon {
+  margin: 7px 0.2rem; 
+}
+
+.nav-bar-icons {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.nav-bar-icons:hover {
+  color: var(--secondary-color);
+}
+
+/* Overiding bootrsrap show on focus */
+.log-in-btn.focus, .log-in-btn:focus {
+  box-shadow: none;
+  color: var(--secondary-color);
+}
+
+.dropdown-menu {
+  margin-left: -50px;
+}
+
+/* -------------------------------------------------------  Search button */
+/* credit to: https://codepen.io/k185 */
+/* https://codepen.io/k185/pen/PQajXE */
+
+.search:focus + .searchbutton {
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+	background-color: white;
+	color: black;
+}
+
+.search-container {
+  padding-top: 0 !important;
+}
+
+.expandright:focus{
+  border: 2px solid var(--secondary-color);
+  border-radius: 7px;
+  padding-left: 5px;
+}
+
+.search {
+  position: relative;
+  top: -0.5rem; /* ths sets the search bar in to place as it is attached to a position of seach*/
+	background-color: white;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 0;
+	height: 100%;
+	z-index: 10;
+	transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	-webkit-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
+}
+
+.search:focus {
+	width: 363px; 
 }
 
 /* ------------------------------------------------------- Footer  */
+footer {
+  background-color: var(--shadow-color);
+}
 
-.social-networks3{
+.social-networks {
   margin-bottom: 0;
+}
+
+.fa-brands,
+.team-members,
+.fa-brands + .team-members,
+.rights-link  {
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
 }
 
 
@@ -66,10 +182,6 @@ footer {
   justify-content: center !important;
   align-items: center !important;
   color: var(--shadow-color);
-  transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 
 .fa-brands:hover {
@@ -77,10 +189,6 @@ footer {
   background-color: var(--shadow-color);
   text-decoration: none;
   border: 3px  #fff solid;
-  transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
 }
 
 .team-members {
@@ -92,7 +200,8 @@ footer {
   text-transform: uppercase;
 }
 
-.team-members:hover {
+.team-members:hover,
+.fa-brands:hover + .team-members{
   color: #fff;
 }
 
@@ -105,10 +214,6 @@ footer {
 .rights-link {
   text-decoration: none;
   color: var(--primary-color);
-  transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
 }
 
 .rights-link:hover {
@@ -155,75 +260,76 @@ a {
 
 /* -------------------------------- NGOs Page Styling */
 .ngo-img {
-    display: flex;
-    width: 10rem;
-    height: 10rem;
-    margin: 1rem auto;
+  display: flex;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem auto;
 }
 
 /* ------------------------------- bootstrap toasts */
 .message-container {
-    position: fixed;
-    top: 4.5rem;
-    right: 1rem;
-    z-index: 99999999999;
+  position: fixed;
+  top: 4.5rem;
+  right: 1rem;
+  z-index: 99999999999;
 }
 
 .custom-toast {
-    overflow: visible;
+  overflow: visible;
 }
 
 .toast-capper {
-    height: 2px;
+  height: 2px;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 2.25rem;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 10px solid black;
+  position: absolute;
+  top: -10px;
+  right: 2.25rem;
 }
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+  border-bottom-color: #007bff !important;
 }
 
 .arrow-secondary {
-    border-bottom-color: #343a40 !important;
+  border-bottom-color: #343a40 !important;
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+  border-bottom-color: #28a745 !important;
 }
 
 .arrow-danger {
-    border-bottom-color: #dc3545 !important;
+  border-bottom-color: #dc3545 !important;
 }
 
 .arrow-warning {
-    border-bottom-color: #ffc107 !important;
+  border-bottom-color: #ffc107 !important;
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+  border-bottom-color: #17a2b8 !important;
 }
 
 .arrow-light {
-    border-bottom-color: #f8f9fa !important;
+  border-bottom-color: #f8f9fa !important;
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+  border-bottom-color: #343a40 !important;
 }
 
 /* .notification-wrapper {
-    height: 6.25rem;
-    overflow-x: hidden;
-    overflow-y: auto;
+  height: 6.25rem;
+  overflow-x: hidden;
+  overflow-y: auto;
 } 
+
