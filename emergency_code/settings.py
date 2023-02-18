@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'NGOBlog',
     'ngos',
     'ckeditor',
+    'profiles',
 
     # Other
     'crispy_forms',
@@ -123,7 +124,7 @@ WSGI_APPLICATION = 'emergency_code.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
