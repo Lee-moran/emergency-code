@@ -13,6 +13,8 @@ class Post(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="blog_posts"
     )
+    featured_image = models.ImageField(null=True, blank=True,
+                                       upload_to="images/featured_image")
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = RichTextField(blank=True, null=True)

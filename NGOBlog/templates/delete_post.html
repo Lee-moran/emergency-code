@@ -14,7 +14,10 @@
             {% csrf_token %}
             {{ form.as_p }}
             <strong>Are you sure?! Once you press the Delete Post! button you cannot undo it!</strong><br/><br/>
-            <button class="btn btn-signup btn-lg">Delete Post!</button>
+
+            <button class="btn btn-danger" style="
+            float: right;
+        ">Delete Post!</button>
         </form>
     </div>
 {% endif %}

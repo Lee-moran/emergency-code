@@ -18,7 +18,7 @@
         <br>
         <small>2. Please don't use punctuation in the title, we prefer just plain text. We are cool.</small>
         <br>
-        <small>3. Try to post something that defines our company, any other posts will be deleted.</small>
+        <small>3. Try to post something that defines our organisation, any other posts will be deleted.</small>
         <br>
         <small>4. Your post can be approved in maximum 24h.</small>
         <br>
@@ -29,7 +29,9 @@
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn btn-signup btn-lg">Post</button>
+        <button class="btn btn-dark mb-2" style="
+        float: right;
+    ">Post</button>
     </form>
 </div>
 {% endif %}

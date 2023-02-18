@@ -16,6 +16,7 @@ class PostForm(forms.ModelForm):
         """Allow user to have access just to certain fields"""
         model = Post
         fields = ('title',
+                  'featured_image',
                   'content')
 
         widgets = {
@@ -36,6 +37,7 @@ class UpdatePostForm(forms.ModelForm):
         """Allow user to have access just to certain fields"""
         model = Post
         fields = ('title',
+                  'featured_image',
                   'content')
 
         widgets = {
