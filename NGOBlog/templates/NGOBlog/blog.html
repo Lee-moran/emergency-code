@@ -5,78 +5,103 @@
 {% load static %}
 
 {% if user.is_authenticated %}
-    <div class="container-fluid">
-        <div class="row">
+<div class="container-fluid">
+    <div class="row">
 
-            <!-- Blog Entries Column -->
-            <div class="col-12 mt-3 left" style="background-color: white;">
-                <div class="d-flex justify-content-end me-3">
-                    <a class="addpostbtn" href="{% url 'add_post' %}">Add a post >></a>
-                </div>
-                <br>
-                <h1 class="text-center">Check out our last events!</h1>
-                <br />
-                <div class="row">
-                    {% for post in post_list %}
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <div class="image-container">
-                                    <!--We will implement a holder for post without an image-->
-                                    {% if "placeholder" in post.featured_image.url %}
-                                    <img class="card-img-top" src="{% static 'images/holdr.JPG' %}"
-                                        alt="This is a placeholder image">
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left" style="background-color: white;">
+            <div class="d-flex justify-content-end me-3">
+                <a class="addpostbtn" href="{% url 'add_post' %}"><i class="bi bi-plus-square"></i> POST </a>
+            </div>
+            <br>
+            <h1 class="text-center">Get social, share how you can help!</h1>
+            <br />
+            <div class="row">
+                {% for post in post_list %}
+                <div class="col-md-12" style="
+                padding-right: 20%;
+                padding-left: 20%;
+            ">
+                    <div class="card mb-4">
+                        <div class="card-body" style="
+                        padding-bottom: 0;
+                    ">
+                            <div class="image-container">
+                                <!--We will implement a holder for post without an image-->
+                                {% if comment.user.profile.profile_pic %}
+                                <div class="image-flash">
+                                    <img src="{{ comment.user.profile.profile_pic.url }}" width=25 height=25
+                                        class="rounded-circle" alt="User profile picture" style="
+                                        float: left;
+                                    ">
                                     {% else %}
-                                    <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                                        alt="Picture added via post">
+                                    <img src="{% static 'images/defaultpic.jpeg' %}" width=25 height=25
+                                        alt="Default Picture" style="
+                                        float: left;
+                                    ">
                                     {% endif %}
-                                    <div class="image-flash">
-                                        <p class="author"> >> {{ post.author }}</p>
-                                    </div>
+                                    <p class="author text-capitalize"> {{ post.author }}</p>
+                                    <a href="{% url 'post_detail' post.slug  %}" class="post-link text-center">
+                                        <h2 class="card-title text-capitalize">{{ post.title }}</h2>
+                                        <p class="card-text">{{ post.excerpt }}</p>
+                                    </a>
                                 </div>
-                                <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                    <h2 class="card-title">{{ post.title }}</h2>
-                                    <p class="card-text">{{ post.excerpt }}</p>
-                                </a>
-                                <br>
-                                <!--We have added an edit and update post-->
-                                <div class="text-center">
-                                    <small><a href="{% url 'update_post' post.pk %}" class="editpost">Edit Post <i class="bi bi-pencil-square"></i></a></small>
-                                    <small><a href="{% url 'delete_post' post.pk %}" class="deletepost">Delete Post <i class="bi bi-trash"></i></a></small>
-                                </div>
-                                <hr />
-                                <p class="card-text text-muted h6"> {{ post.created_on}} <i class="bi bi-heart-fill"></i>
+                                <!--There is bug here,-->
+                                {% if "placeholder" in post.featured_image.url %}
+                                <img src="{{ post.featured_image.url }}" width="100%" alt="picture added by user">
+                                {% else %}
+                                <img src="{% static 'images/pholdb.webp' %}" width="100%" alt="placeholder">
+                                {% endif %}
+                            </div>
+                            <br>
+                            <!--We have added an edit and update post-->
+                            <div class="text-center mb-1">
+                                <small><a href="{% url 'update_post' post.pk %}"
+                                        class="editpost btn btn-success mr-3">Edit
+                                        Post <i class="bi bi-pencil-square"></i></a></small>
+                                <small><a href="{% url 'delete_post' post.pk %}"
+                                        class="deletepost btn btn-danger">Delete
+                                        Post <i class="bi bi-trash"></i></a></small>
+                            </div>
+                            <div class="text-right">
+                                <p class="card-text text-muted h6 mr-3"> {{ post.created_on}} <i
+                                        class="bi bi-heart-fill"></i>
                                     {{ post.number_of_likes }}</p>
                             </div>
                         </div>
                     </div>
-                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                <div class="row">
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                <p class="text-center"><small><em>Leave a comment expressing what you think.</em></small></p>
             </div>
         </div>
-        <!--If there are more than 6 posts on a page, django will create another-->
-        {% if is_paginated %}
-        <nav aria-label="Page navigation" style="
+    </div>
+</div>
+{% if forloop.counter|divisibleby:12 %}
+</div>
+<div class="row">
+    {% endif %}
+    {% endfor %}
+</div>
+<p class="text-center"><small><em>Leave a comment expressing what you think.</em></small></p>
+</div>
+</div>
+<!--If there are more than 6 posts on a page, django will create another-->
+{% if is_paginated %}
+<nav aria-label="Page navigation" style="
         background-color: white;
     ">
-            <ul class="pagination justify-content-center">
-                {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"
-                        style="color: #000000; background-color: white;">&laquo; PREV </a></li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"
-                        style="color: #000000; background-color: white;"> NEXT &raquo;</a></li>
-
-                {% endif %}
-            </ul>
-        </nav>
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"
+                style="color: #000000; background-color: white;">&laquo; PREV </a></li>
         {% endif %}
-    </div>
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"
+                style="color: #000000; background-color: white;"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+</div>
 {% endif %}
 {%endblock%}
