@@ -41,10 +41,13 @@
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-5 mb-5">
             {% for n in nongovernmentorgs %}
             <div class="col mb-4">
-                <div class="card h-100">
+                <div class="card h-100 card-alt">
                     <a href="">
                         <img class="card-img-top img-fluid ngo-img" src="{{ n.image.url }}" alt="{{ n.name }}">
                     </a>
+                    <div class="card-body">
+                        <p class="card-title h6 font-weight-bold text-center">{{ n.friendly_name }}</p>
+                    </div>
                 </div>
             </div>
             {% endfor %}
