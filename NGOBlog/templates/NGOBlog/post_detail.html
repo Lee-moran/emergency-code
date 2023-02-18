@@ -86,14 +86,14 @@
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div class="comments shadow p-2 mb-2 bg-white" style="padding: 10px;border-radius: 35px;">
-                    <p class="font-weight-bold">
+                <div class="comments shadow p-2 mb-2 bg-white" style="padding: 10px;border-radius: 15px;">
+                    <p>
                         <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {% if comment.user.profile.profile_pic %}
-                        <img src="{{ comment.user.profile.profile_pic.url }}" width=50 height=50 class="rounded-circle"
+                        <img src="{{ comment.user.profile.profile_pic.url }}" width=30 height=30 class="rounded-circle"
                             alt="User profile picture">
                         {% else %}
-                        <img src="{% static 'images/defaultpic.jpeg' %}" width=50 height=50 alt="Default Picture">
+                        <img src="{% static 'images/defaultpic.jpeg' %}" width=30 height=30 alt="Default Picture">
                         {% endif %}
                         {{ comment.name }}
                         <a href="{% url 'show_profile_page' comment.user.profile.id %}"><i class="bi bi-book-fill"
@@ -102,7 +102,6 @@
                         {{ comment.created_on }}</span> wrote:
                     </p>
                     <!-- The body of the comment -->
-
                     {{ comment.body | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
@@ -119,12 +118,13 @@
                 {% else %}
                 {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
+                <p>Post a comment as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-dark">Submit</button>
+                    <button type="submit" class="btn btn-dark" style="
+                    float: right;
+                ">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}
