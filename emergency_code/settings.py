@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'NGOBlog',
     'ngos',
     'ckeditor',
-    'profiles',
 
     # Other
     'crispy_forms',
