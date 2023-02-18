@@ -66,35 +66,16 @@ def all_ngos(request):
 
     return render(request, 'ngos/ngos.html', context)
 
-# def ngo_detail(request, nongovernmentorgs_id):
-#     """ A view to render individual NGO detail """
 
+def ngo_detail(request, nongovernmentorg_id):
+    """ A view to show the individual NGO detail page """
 
-def all_causes(request):
-    """A view to show all the available categories, ie, causes """
-    categories = Category.objects.all()
-
-    context = {
-        'categories': categories,
-    }
-    return render(request, 'ngos/causes.html', context)
-
-
-def cause_detail(request, category_id):
-    """
-    A view to show individual category/ cause details
-    including filtered NGOs by category/ cause details
-    """
-    category = Category.objects.all()
-    ngo = NonGovernmentOrg.objects.all()
-    cause = get_object_or_404(Category, pk=category_id)
-    ngos = NonGovernmentOrg.objects.filter(category=category)
+    ngos = NonGovernmentOrg.objects.all()
+    nongovernmentorg = get_object_or_404(NonGovernmentOrg,
+                                         pk=nongovernmentorg_id)
 
     context = {
-        'category': category,
-        'ngo': ngo,
-        'cause': cause,
-        'ngos': ngos,
+        'nongovernmentorg': nongovernmentorg,
     }
 
-    return render(request, 'ngos/cause_detail.html', context)
+    return render(request, 'ngos/ngo_detail.html', context)

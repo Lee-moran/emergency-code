@@ -91,22 +91,22 @@
 
         <!-- CARDS OF ALL AVAILABLE NGOs -->
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-5 mb-5">
-            {% for n in nongovernmentorgs %}
+            {% for nongovernment in nongovernmentorgs %}
                 <div class="col mb-4">
                     <div class="card h-100 card-alt">
-                        <a href="">
-                            <img class="card-img-top img-fluid ngo-img" src="{{ n.image.url }}" alt="{{ n.name }}">
+                        <a href="{% url 'ngo_detail' nongovernment.id %}">
+                            <img class="card-img-top img-fluid ngo-img" src="{{ nongovernment.image.url }}" alt="{{ nongovernment.name }}">
                         </a>
                         <div class="card-body">
-                            <p class="card-title h6 font-weight-bold text-center">{{ n.friendly_name }}</p>
+                            <p class="card-title h6 font-weight-bold text-center">{{ nongovernment.friendly_name }}</p>
                         </div>
                         <div class="text-center mb-4">
                             <!-- NGO category/ cause name -->
-                            {% if n.category %}
+                            {% if nongovernment.category %}
                                 <p class="small mt-2 mb-0 text-center mx-3">
                                     <a class="font-weight-bold text-green"
-                                        href="{% url 'ngos' %}?category={{ n.category.name }}">
-                                        <i class="fas fa-hand-holding-hand pr-2"></i> {{ n.category.friendly_name }}
+                                        href="{% url 'ngos' %}?category={{ nongovernment.category.name }}">
+                                        <i class="fas fa-hand-holding-hand pr-2"></i> {{ nongovernment.category.friendly_name }}
                                     </a>
                                 </p>
                             {% endif %}
