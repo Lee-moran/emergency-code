@@ -11,7 +11,13 @@
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left" style="background-color: white;">
             <div class="d-flex justify-content-end me-3">
-                <a class="addpostbtn" href="{% url 'add_post' %}"><i class="bi bi-plus-square"></i> POST </a>
+                <a class="text-center" href="{% url 'add_post' %}" style="
+                background-color: #04c304;
+                padding: 4px;
+                color: whitesmoke;
+                border: 2px solid #920000;
+                border-radius: 8px;
+            ">Add Post <i class="fa-solid fa-envelope-open-text"></i></a>
             </div>
             <br>
             <h1 class="text-center">Get social, share how you can help!</h1>
@@ -19,8 +25,8 @@
             <div class="row">
                 {% for post in post_list %}
                 <div class="col-md-12" style="
-                padding-right: 20%;
-                padding-left: 20%;
+                padding-right: 25%;
+                padding-left: 25%;
             ">
                     <div class="card mb-4">
                         <div class="card-body" style="
@@ -28,9 +34,9 @@
                     ">
                             <div class="image-container">
                                 <!--We will implement a holder for post without an image-->
-                                {% if comment.user.profile.profile_pic %}
+                                {% if blog.user.profile.profile_pic %}
                                 <div class="image-flash">
-                                    <img src="{{ comment.user.profile.profile_pic.url }}" width=25 height=25
+                                    <img src="{{ blog.user.profile.profile_pic.url }}" width=25 height=25
                                         class="rounded-circle" alt="User profile picture" style="
                                         float: left;
                                     ">
@@ -40,35 +46,34 @@
                                         float: left;
                                     ">
                                     {% endif %}
-                                    <p class="author text-capitalize"> {{ post.author }}</p>
+                                    <p class="author text-capitalize">{{ post.author }}</p>
                                     <a href="{% url 'post_detail' post.slug  %}" class="post-link text-center">
                                         <h2 class="card-title text-capitalize">{{ post.title }}</h2>
                                         <p class="card-text">{{ post.excerpt }}</p>
                                     </a>
                                 </div>
-                                <!--There is bug here,-->
-                                
                                 {% if post.featured_image %}
-                                
-                                <img src="/media/{{post.featured_image }}" width="100%" alt="picture added by user">
+                                <img src="/media/{{ post.featured_image }}" width="100%" alt="picture added by user">
                                 {% else %}
                                 <img src="{% static 'images/pholdb.webp' %}" width="100%" alt="placeholder">
                                 {% endif %}
                             </div>
                             <br>
+                            <div>
+                                <h5><i class="fa-solid fa-heart ps-3"></i>
+                                    {{ post.number_of_likes }}</h5>
+                            </div>
                             <!--We have added an edit and update post-->
                             <div class="text-center mb-1">
                                 <small><a href="{% url 'update_post' post.pk %}"
                                         class="editpost btn btn-success mr-3">Edit
-                                        Post <i class="bi bi-pencil-square"></i></a></small>
+                                        Post <i class="fa-solid fa-pencil"></i></a></small>
                                 <small><a href="{% url 'delete_post' post.pk %}"
                                         class="deletepost btn btn-danger">Delete
-                                        Post <i class="bi bi-trash"></i></a></small>
+                                        Post <i class="fa-solid fa-trash"></i></a></small>
                             </div>
                             <div class="text-right">
-                                <p class="card-text text-muted h6 mr-3"> {{ post.created_on}} <i
-                                        class="bi bi-heart-fill"></i>
-                                    {{ post.number_of_likes }}</p>
+                                <small> <em>{{ post.created_on}}</em></small>
                             </div>
                         </div>
                     </div>
