@@ -34,24 +34,92 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="col text-center mt-1">
-            <h2 class="display-4 brand-font text-black text-center my-5">View All NGOs</h2>
+        <div class="row">
+            <div class="col text-center mt-1">
+                <!-- PAGE HEADING -->
+                <h2 class="display-4 text-black text-center my-5">View All NGOs</h2>
+                <!-- NGOs FILTERING &amp; SORTING AREA -->
+                {% for c in current_categories %}
+                <!-- Dynamically displays category badge based on filtered data passed from a user's navbar click event -->
+                <a class="category-badge text-decoration-none px-1 py-1" href="{% url 'ngos' %}?category={{ c.name }}">
+                    <span
+                        class="p-2 mt-2 badge text-green"><span class="h6 font-weight-bold">{{ c.friendly_name }}</span>
+                    </span>
+                </a>
+                {% endfor %}
+            </div>
         </div>
-        <!-- List of all listed NGOs -->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-5 mb-5">
-            {% for n in nongovernmentorgs %}
-            <div class="col mb-4">
-                <div class="card h-100 card-alt">
-                    <a href="">
-                        <img class="card-img-top img-fluid ngo-img" src="{{ n.image.url }}" alt="{{ n.name }}">
-                    </a>
-                    <div class="card-body">
-                        <p class="card-title h6 font-weight-bold text-center">{{ n.friendly_name }}</p>
+        <!-- NGOS SORTING DROPDOWN -->
+        <div class="row mt-3">
+            <div class="container col-10 offset-1">
+                <div class="row mt-1 mb-2">
+                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector"
+                                class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                                </option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>NGO Name
+                                    (A-Z)
+                                </option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>NGO Name
+                                    (Z-A)
+                                </option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                    Causes (A-Z)
+                                </option>
+                                <option value="category_desc"
+                                    {% if current_sorting == 'category_desc' %}selected{% endif %}>Causes (Z-A)
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Displays number of NGOs available from user actions: searched term on search bar, NGO sorting or navbar click event -->
+                    <div class="col-12 col-md-6 order-md-first">
+                        <p class="alt-a mt-3 text-center font-weight-bold text-md-left">
+                            {% if search_term or current_categories or current_sorting != 'None_None' %}
+                            <span><a href="{% url 'ngos' %}" class="alt-a font-weight-bold">View All NGOs </a> |
+                            </span>
+                            {% endif %}
+                                {{ nongovernmentorgs|length }} NGOs{% if search_term %} found for <strong>"{{ search_term }}"</strong>
+                            {% endif %}
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- CARDS OF ALL AVAILABLE NGOs -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-5 mb-5">
+            {% for nongovernment in nongovernmentorgs %}
+                <div class="col mb-4">
+                    <div class="card h-100 card-alt">
+                        <a href="{% url 'ngo_detail' nongovernment.id %}">
+                            <img class="card-img-top img-fluid ngo-img" src="{{ nongovernment.image.url }}" alt="{{ nongovernment.name }}">
+                        </a>
+                        <div class="card-body">
+                            <p class="card-title h6 font-weight-bold text-center">{{ nongovernment.friendly_name }}</p>
+                        </div>
+                        <div class="text-center mb-4">
+                            <!-- NGO category/ cause name -->
+                            {% if nongovernment.category %}
+                                <p class="small mt-2 mb-0 text-center mx-3">
+                                    <a class="font-weight-bold text-green"
+                                        href="{% url 'ngos' %}?category={{ nongovernment.category.name }}">
+                                        <i class="fas fa-hand-holding-hand pr-2"></i> {{ nongovernment.category.friendly_name }}
+                                    </a>
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
         </div>
     </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'ngos/includes/sort_selector_box_script.html' %}
 {% endblock %}

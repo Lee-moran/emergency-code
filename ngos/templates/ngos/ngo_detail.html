@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_meta %}
+    <meta name="description" property="og:description" content="">
+    <meta name="keywords" content="Support NGOs, World NGO Day, non-governmental organization">
+
+    {% comment %} Essential Meta Tags for Social Media - Facebook and Twitter {% endcomment %}
+    <meta property="og:title" content="Home | SupportNGOs">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:image:alt"
+        content="">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    {% comment %} Non-Essential but Recommended Meta Tags {% endcomment %}
+    <meta property="og:description"
+        content="">
+    <meta property="og:site_name" content="Support NGOs">
+    <meta name="twitter:image:alt"
+        content="">
+{% endblock %}
+
+{% block extra_title %} |{% endblock %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container mb-3 mt-5">
+        <!-- Individual NGO logo and description -->
+        <div class="row mx-3">
+            <div class="col-12">
+                {% if nongovernmentorg.image %}
+                    <a href="" target="_blank">
+                        <img class="ngo-img" src="{{ nongovernmentorg.image.url }}" alt="{{ nongovernmentorg.name }}">
+                    </a>
+                {% endif %}
+                <p class="mb-2 h4 font-weight-bold brand-font-alt text-center">{{ nongovernmentorg.friendly_name }}</p>
+                <p class="mt-3">{{ nongovernmentorg.description }}</p>
+            </div>
+            <!-- External Link to the NGO's website which opens in another tab -->
+            <div class="row p-0 mb-1 ml-3 mb-3">
+                <a href="{{ nongovernmentorg.website }}" class="text-decoration-none text-green"
+                    target="_blank" rel="noopener" aria-label="Link to {{ nongovernmentorg.name }}' website">
+                    Learn More about {{ nongovernmentorg.friendly_name }}'s work on {{ nongovernmentorg.category }} causes by visiting their site.
+                </a>
+            </div>
+            <!-- External Link to the NGO's website which opens in another tab -->
+
+            <!-- <a href="https://www.cafonline.org/my-personal-giving/start-giving/donate-now"
+                class="btn btn-sm btn-black text-shadow mt-1 rounded-0">
+                <span class="text-uppercase">Donate to {{ nongovernmentorg.friendly_name }} NOW</span>
+                <span class="icon">
+                    <i class="fas fa-heart"></i>
+                </span>
+            </a>
+
+            <div class="row text-center mt-3">
+                <a href="https://www.cafonline.org/my-personal-giving/start-giving/donate-now" target="_blank" rel="noopener" aria-label="Link to CFA's website"
+                    class="btn btn-outline-black rounded-3 mt-2">
+                        <i class="fas fa-heart"></i><strong class="text-uppercase mr-2">  Donate to {{ nongovernmentorg.friendly_name }} NOW </strong>
+                </a>
+
+
+
+            </div> -->
+
+        </div>
+    </div>
+
+
+{% endblock %}
