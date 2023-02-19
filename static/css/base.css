@@ -153,9 +153,15 @@ padding-top: 0.5rem;
 /* ------------------------------------------------------- Footer  */
 .footer {
   background-color: var(--shadow-color);
-  position: fixed;
   width: 100%;
   height: 20rem;
+  background-color: #590085;
+  margin-top: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 13%;
 }
 
 .social-networks {
@@ -234,7 +240,7 @@ a {
 }
 
 .text-red {
-    color: #ff0000;
+    color: #ffffffb6;
 }
 
 .text-green {
@@ -246,7 +252,7 @@ a {
     justify-content: center;
     align-items:first baseline;
     margin: 2rem auto;
-    color: var(--primary-color);
+    color: #ffffffb6;
 }
 
 /* -------------------------------- Highlights Section Below Hero Styling */
