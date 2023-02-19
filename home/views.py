@@ -20,11 +20,7 @@ class EditProfilePageView(generic.UpdateView):
     model = Profile
     template_name = 'account/edit_profile_page.html'
     fields = ['profile_pic',
-              'bio',
-              'website_url',
-              'facebook_url',
-              'twitter_url',
-              'instagram_url']
+              'bio',]
     success_url = reverse_lazy('home')
 
 

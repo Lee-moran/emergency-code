@@ -47,8 +47,10 @@
                                     </a>
                                 </div>
                                 <!--There is bug here,-->
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img src="{{ post.featured_image.url }}" width="100%" alt="picture added by user">
+                                
+                                {% if post.featured_image %}
+                                
+                                <img src="/media/{{post.featured_image }}" width="100%" alt="picture added by user">
                                 {% else %}
                                 <img src="{% static 'images/pholdb.webp' %}" width="100%" alt="placeholder">
                                 {% endif %}
