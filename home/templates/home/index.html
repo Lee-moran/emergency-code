@@ -2,11 +2,12 @@
 {% load static %}
 
 {% block extra_meta %}
-    <meta name="description" property="og:description" content="">
-    <meta name="keywords" content="Support NGOs, World NGO Day, non-governmental organization">
+    <meta name="description" property="og:description" content="At SupportNGOs, we believe that every contribution, no matter how small,
+        can make a difference. We give you the power to choose your causes and the NGOs you'd like to support.">
+    <meta name="keywords" content="Support NGOs, World NGO Day, support issues and causes, non-governmental organizations">
 
     {% comment %} Essential Meta Tags for Social Media - Facebook and Twitter {% endcomment %}
-    <meta property="og:title" content="Home | SupportNGOs">
+    <meta property="og:title" content="SupportNGOs | Home">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
     <meta property="og:image:alt"
@@ -25,11 +26,11 @@
 {% block extra_title %}Home |{% endblock %}
 
 {% block page_header %}
-    <!-- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col"></div>
         </div>
-    </div> -->
+    </div>
 {% endblock %}
 
 {% block content %}
@@ -100,7 +101,7 @@
     <!-- FEATURED POST AREA -->
     <div class="featured-bg mt-4 pb-5">
         <h3 class="text-center display-4 pt-5">Welcome to Support NGOs.</h3>
-        <div class="featured-post pt-3">
+        <div class="featured-post-intro pt-3">
             <p class="text-center h5"><em>Our team at SupportNGOs are proud to present a list of non-governmental organisations (NGOs) that are doing
                amazing work in various fields. We believe that supporting these organisations is essential for a better world,
                and we want to give you the power to choose which ones you would like to support.</em>
@@ -137,7 +138,7 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-3 my-3 pb-5">
         {% for category in categories %}
             <div class="col mb-4">
-                <div class="card h-100 card-alt">
+                <div class="card h-100 card-alt card-alt-transition">
                     <a href="{% url 'ngos' %}?category={{ category.name }}">
                         <div class="card-body">
                             <p class="card-title text-center h6 font-weight-bold text-green">{{ category.friendly_name }}</p>
