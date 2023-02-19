@@ -1,6 +1,5 @@
 import re
 from django.shortcuts import render
-from ngos.models import Category
 from django.views.generic import TemplateView
 from django.contrib.auth.views import PasswordChangeView
 from django.shortcuts import render, get_object_or_404
@@ -14,7 +13,6 @@ from django.views.generic import DetailView
 from .models import SubscribedUsers, Profile
 from .forms import EditProfileForm, PasswordChangingForm
 from ngos.models import Category, NonGovernmentOrg
-from ngos.models import Category
 
 
 def index(request):
