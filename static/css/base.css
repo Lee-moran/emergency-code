@@ -252,6 +252,14 @@ a {
     color: #ffffffb6;
 }
 
+.user_name_hover:hover {
+  color: rgb(0, 134, 13);
+}
+
+.card-title:hover {
+  color:#007bff;
+}
+
 /* -------------------------------- Highlights Section Below Hero Styling */
 .vertical-line-right {
   border-right: 4px solid green;

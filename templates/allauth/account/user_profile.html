@@ -3,7 +3,9 @@
 
 {% block content %}
 <!--User can see preview it's profile-->
-<h1 class="text-center">Welcome to {{ page_user.user.first_name }}'s profile.</h1>
+<h1 class="text-center m-3" style="
+    color: #07430c;
+"><strong><em>Welcome to {{ page_user.user.first_name }}'s profile.</em></strong></h1>
 <br />
 <!--After editing the profile the user can see it's profile picture / default-->
 {% if page_user.profile_pic %}
@@ -28,46 +30,6 @@
                     {{ page_user.user.last_name }}:</em></strong></h6>
         <br>
         <p class="card-text">{{ page_user.bio }}</p>
-        <hr>
-        <br />
-        <!--User social media links-->
-        <p>
-            <h6><strong><em>Check out my Social Media links:</em></strong></h6>
-            <br>
-            {% if page_user.facebook_url is not none %}
-            >> <a href="{{ page_user.user.facebook_url }}" target="_blank" rel="noopener"
-                aria-label="User Facebook profile" style="
-        color: rgb(173, 86, 20);
-        ">Check out my Facebook page: <strong><i class="bi bi-facebook"></i></strong></a>
-            {% endif %}
-        </p>
-        <br>
-        <p>
-            {% if page_user.instagram_url is not none %}
-            >> <a href="{{ page_user.user.instagram_url }}" target="_blank" rel="noopener"
-                aria-label="User Instagram profile" style="
-        color: rgb(23, 128, 49);
-        ">Check out my Instagram page: <strong><i class="bi bi-instagram"></i></strong></a>
-            {% endif %}
-        </p>
-        <br>
-        <p>
-            {% if page_user.twitter_url is not none %}
-            >> <a href="{{ page_user.profile.twitter_url }}" target="_blank" rel="noopener"
-                aria-label="User Twitter Profile" style="
-        color: rgb(106, 28, 184);
-        ">Check out my Twitter page: <strong><i class="bi bi-twitter"></i></strong></a>
-            {% endif %}
-        </p>
-        <br>
-        <p>
-            {% if page_user.website_url is not none %}
-            >> <a href="{{ page_user.profile.website_url }}" target="_blank" rel="noopener" aria-label="User Website"
-                style="
-        color: rgb(3, 0, 190);
-        ">Check out my Website: <strong><i class="bi bi-globe2"></i></strong></a>
-            {% endif %}
-        </p>
     </div>
 </div>
 
