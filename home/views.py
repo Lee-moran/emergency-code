@@ -15,17 +15,6 @@ from .forms import EditProfileForm, PasswordChangingForm
 from ngos.models import Category, NonGovernmentOrg
 
 
-def index(request):
-    """ A view to return the index page """
-    categories = Category.objects.all()
-
-    context = {
-        'categories': categories,
-    }
-
-    return render(request, 'home/index.html', context)
-
-
 class EditProfilePageView(generic.UpdateView):
     """Allow users to edit their profile"""
     model = Profile
@@ -54,6 +43,13 @@ class ShowProfilePageView(DetailView):
 
 def index(request):
     """User can Get in touch with us - gmail settings"""
+    categories = Category.objects.all()
+
+    context = {
+        'categories': categories,
+    }
+    return render(request, 'home/index.html', context)
+
     if request.method == 'POST':
         name = request.POST.get('full-name')
         email = request.POST.get('email')
