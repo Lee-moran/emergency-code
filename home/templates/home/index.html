@@ -86,12 +86,12 @@
         <h3 class="display-4 pb-3">Find the NGOs You Wish to Support</h3>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-3 my-3">
-        {% for c in categories %}
+        {% for category in categories %}
             <div class="col mb-4">
                 <div class="card h-100 card-alt">
-                    <a href="{% url 'ngos' %}?category={{ c.name }}">
+                    <a href="{% url 'ngos' %}?category={{ category.name }}">
                         <div class="card-body">
-                            <p class="card-title text-center h6 font-weight-bold text-green">{{ c.friendly_name }}</p>
+                            <p class="card-title text-center h6 font-weight-bold text-green">{{ category.friendly_name }}</p>
                         </div>
                     </a>
                 </div>
