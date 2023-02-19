@@ -103,9 +103,6 @@ padding-top: 0.5rem;
   color: var(--secondary-color);
 }
 
-.dropdown-menu {
-  margin-left: -50px;
-}
 
 /* -------------------------------------------------------  Search button */
 /* credit to: https://codepen.io/k185 */
