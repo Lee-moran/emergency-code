@@ -1,6 +1,5 @@
-from django.shortcuts import render
-from ngos.models import Category
 import re
+from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.contrib.auth.views import PasswordChangeView
 from django.shortcuts import render, get_object_or_404
@@ -13,17 +12,7 @@ from django.views import generic
 from django.views.generic import DetailView
 from .models import SubscribedUsers, Profile
 from .forms import EditProfileForm, PasswordChangingForm
-
-
-def index(request):
-    """ A view to return the index page """
-    categories = Category.objects.all()
-
-    context = {
-        'categories': categories,
-    }
-
-    return render(request, 'home/index.html', context)
+from ngos.models import Category, NonGovernmentOrg
 
 
 class EditProfilePageView(generic.UpdateView):
@@ -54,6 +43,13 @@ class ShowProfilePageView(DetailView):
 
 def index(request):
     """User can Get in touch with us - gmail settings"""
+    categories = Category.objects.all()
+
+    context = {
+        'categories': categories,
+    }
+    return render(request, 'home/index.html', context)
+
     if request.method == 'POST':
         name = request.POST.get('full-name')
         email = request.POST.get('email')

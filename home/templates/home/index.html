@@ -80,23 +80,73 @@
             <span class="sr-only">Next</span>
         </button>
     </div>
-
-    <!-- NGO CATEGORIES AREA -->
-    <div class="text-center mt-5">
-            <h3 class="display-4 pb-3">Find the NGOs You Wish to Support</h3>
+    <!-- FOUR COLUMNS HIGHLIGHT BAR -->
+    <div class="container mt-4">
+        <div class="row align-items-start grid-divider">
+            <div class="col vertical-line-right">
+                <p class="font-weight-bold h5 text-green">HOW CAN YOU SUPPORT NGOs?</p>
+            </div>
+            <div class="col vertical-line-left">
+                <p class=""><em>Choose the causes and issues that matter the most to you.</em></p>
+            </div>
+            <div class="col vertical-line-left">
+                <p class=""><em>Find the NGOs doing the critical work in these areas.</em></p>
+            </div>
+            <div class="col vertical-line-left">
+                <p class=""><em>Contribute, no matter how small. Donate. Volunteer.</em></p>
+            </div>
+        </div>
     </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-3 my-3">
-            {% for category in categories %}
+    <!-- FEATURED POST AREA -->
+    <div class="featured-bg mt-4 pb-5">
+        <h3 class="text-center display-4 pt-5">Welcome to Support NGOs.</h3>
+        <div class="featured-post pt-3">
+            <p class="text-center h5"><em>Our team at SupportNGOs are proud to present a list of non-governmental organisations (NGOs) that are doing
+               amazing work in various fields. We believe that supporting these organisations is essential for a better world,
+               and we want to give you the power to choose which ones you would like to support.</em>
+            </p>
+        </div>
+        <div class="featured-post-body pt-3">
+            <p>Our list includes a wide range of NGOs, covering a variety of causes and issues. We have organisations that focus on education, poverty alleviation,
+                human rights, environmental conservation, and many more. Each of these NGOs is doing critical work to make a positive impact in the world, and
+                we encourage you to explore their missions and learn more about their activities.
+            </p>
+        </div>
+        <div class="featured-post-body pt-2">
+            <p>At this stage, we understand that you may not be able to support every NGO on our list. However, we encourage you to choose the organisations that
+                reasonate with you and that you believe are doing important work. Once you have made your selection, we will provide you with information on
+                how you can donate to them directly.
+            </p>
+        </div>
+        <div class="featured-post-body pt-">
+            <p>By giving you the power to choose which NGOs you want to support, we hope to inspire you to take an active role in making a positive impact in the world.
+                We believe that every contribution, no matter how small, can make a difference, and we thank you for considering supporting these fantastic organisations.
+            </p>
+        </div>
+        <div class="featured-post-closing pt-3">
+            <p class="h5 font-weight-bold text-green"><em>And remember, supporting these NGOs is not only a great way to give back to the world, but it's also a great excuse
+                to avoid the guilt of not using that gym membership! Jokes aside, we hope you find an NGO that speaks to your heart and that you can contribute to their mission.
+                Let's make the world a better place, one donation at a time!</em>
+            </p>
+        </div>
+    </div>
+    <!-- NGO CATEGORIES AREA -->
+    <div class="text-center mt-5 pt-1">
+        <h3 class="display-4 pb-3">Find the NGOs You Wish to Support</h3>
+    </div>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-3 my-3 pb-5">
+        {% for category in categories %}
             <div class="col mb-4">
                 <div class="card h-100 card-alt">
-                    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
-                    <div class="card-body">
-                        <p class="card-title text-center h6 font-weight-bold">{{ category.friendly_name }}</p>
-                    </div>
+                    <a href="{% url 'ngos' %}?category={{ category.name }}">
+                        <div class="card-body">
+                            <p class="card-title text-center h6 font-weight-bold text-green">{{ category.friendly_name }}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            {% endfor %}
-        </div>
+        {% endfor %}
+    </div>
 
 
 {% endblock %}
