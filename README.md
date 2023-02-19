@@ -31,11 +31,6 @@ Support NGOs is a platform created during a five day World NGO Day hackathon to 
 * [Acknoledgements](#acknowledgements)
 
 ---
-## Project Overview
-Hand of Empathy is a multi-brand, ecommerce full stack project built using Django, Python, JavaScript and Bootstrap 4. The site is deployed to Heroku, 
-Hand of Empathy is a RealEstate site that links the consumer to the major NGO catergories. Where a user can select the prefered category donate to that prefered charity. 
-
-
 ## User Experience
 
 ### Strategy Plane
@@ -48,10 +43,10 @@ Hand of Empathy is a RealEstate site that links the consumer to the major NGO ca
 
 ### Fonts and color
 
-Exo, Roboto, and Montserrat are popular font choices for a variety of design projects due to their versatility and readability. 
-Exo is a modern sans-serif font that has a clean and futuristic look, making it suitable for technology-based designs. 
-Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials. 
-Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel. 
+Exo, Roboto, and Montserrat are popular font choices for a variety of design projects due to their versatility and readability.
+Exo is a modern sans-serif font that has a clean and futuristic look, making it suitable for technology-based designs.
+Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials.
+Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel.
 
 Additionally, all three fonts have a range of weights and styles that allow for flexibility in design, making them suitable for a variety of projects. Whether it's for a website, logo, or printed material, Exo, Roboto, and Montserrat are excellent choices for designers looking for fonts that are modern, versatile, and highly readable.
 
