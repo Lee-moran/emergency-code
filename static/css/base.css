@@ -13,7 +13,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Lato&family=Montserrat&family=Roboto&display=swap");
 
 /* primary colors and sections */
-
 :root {
     --primary-color: #02a4db;
     --secondary-color: #1e982d;
@@ -103,9 +102,6 @@ padding-top: 0.5rem;
   color: var(--secondary-color);
 }
 
-.dropdown-menu {
-  margin-left: -50px;
-}
 
 /* -------------------------------------------------------  Search button */
 /* credit to: https://codepen.io/k185 */
@@ -151,8 +147,17 @@ padding-top: 0.5rem;
 }
 
 /* ------------------------------------------------------- Footer  */
-footer {
+.footer {
   background-color: var(--shadow-color);
+  width: 100%;
+  height: 20rem;
+  background-color: #590085;
+  margin-top: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 13%;
 }
 
 .social-networks {
@@ -209,6 +214,7 @@ footer {
   color: var(--background-color);
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 0 !important;
 }
 
 .rights-link {
@@ -226,11 +232,11 @@ a {
 
 /* -------------------------------- Home Page Hero Section Styling */
 .carousel-img {
-    height: 38rem;
+    height: 52rem;
 }
 
 .text-red {
-    color: #ff0000;
+    color: #ffffffb6;
 }
 
 .text-green {
@@ -242,7 +248,7 @@ a {
     justify-content: center;
     align-items:first baseline;
     margin: 2rem auto;
-    color: var(--primary-color);
+    color: #ffffffb6;
 }
 
 /* -------------------------------- Highlights Section Below Hero Styling */
@@ -263,7 +269,7 @@ a {
   background-color: #e1e2e7;
 }
 
-.featured-post {
+.featured-post-intro {
   display: flex;
   margin-right: 3rem;
   margin-left: 3rem;
@@ -293,6 +299,27 @@ a {
                 15px 15px 15px rgba(0, 0, 0, 0.1) inset;
 }
 
+.card-alt:hover {
+  box-shadow: 0 22px 22px -8px #cbced1,
+              -8px 0 22px -8px #cbced1,
+              22px 0 22px -8px #cbced1;
+  border: 1px solid rgba(225, 226, 231, 0.3) !important;
+}
+
+.card-alt-transition {
+  -webkit-transition: border 2s ease-out;
+    -moz-transition: border 2s ease-out;
+    -o-transition: border 2s ease-out;
+    transition: border 2s ease-out;
+    -webkit-transition: box-shadow 2s ease-out;
+    -moz-transition: box-shadow 2s ease-out;
+    -o-transition: box-shadow 2s ease-out;
+    transition: box-shadow 2s ease-out;
+}
+
+
+
+
 /* -------------------------------- NGOs Page Styling */
 .ngo-img {
     display: flex;
@@ -312,10 +339,22 @@ a.category-badge > span.badge:hover {
 
 /* -------------------------------- NGO Detail Page Styling */
 
-.btn-outline-black {
-  background: white;
-  color: black !important;
-  border: 1px solid black;
+.btn-rows {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 2rem auto;
+}
+
+.btn-alt {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  border: 10px solid var(--clr);
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.2),
+              15px 15px 15px rgba(0, 0, 0, 0.1),
+              -10px -10px 10px rgba(255, 255, 255, 0.2) inset,
+              15px 15px 15px rgba(0, 0, 0, 0.1) inset;
 }
 
 /* ------------------------------- bootstrap toasts */
@@ -413,4 +452,14 @@ a.category-badge > span.badge:hover {
   -moz-transform: skew(15deg);
   transform: skew(15deg);
   z-index: 100;
+}
+
+/* ------------------------------- MEDIA QUERIES */
+@media (max-width: 992px) {
+  .btn-rows {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
 }
