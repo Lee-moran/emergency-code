@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['support-ngo.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -87,7 +87,6 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',  # req by allauth
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
             ],
