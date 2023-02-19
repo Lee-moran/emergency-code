@@ -32,6 +32,9 @@ Support NGOs is a platform created during a five day World NGO Day hackathon to 
 
 ---
 ## Project Overview
+Hand of Empathy is a multi-brand, ecommerce full stack project built using Django, Python, JavaScript and Bootstrap 4. The site is deployed to Heroku, 
+Hand of Empathy is a RealEstate site that links the consumer to the major NGO catergories. Where a user can select the prefered category donate to that prefered charity. 
+
 
 ## User Experience
 
@@ -42,6 +45,24 @@ Support NGOs is a platform created during a five day World NGO Day hackathon to 
 ### Structure Plane
 
 ### Skeleton Plane
+
+### Fonts and color
+
+Exo, Roboto, and Montserrat are popular font choices for a variety of design projects due to their versatility and readability. 
+Exo is a modern sans-serif font that has a clean and futuristic look, making it suitable for technology-based designs. 
+Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials. 
+Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel. 
+
+Additionally, all three fonts have a range of weights and styles that allow for flexibility in design, making them suitable for a variety of projects. Whether it's for a website, logo, or printed material, Exo, Roboto, and Montserrat are excellent choices for designers looking for fonts that are modern, versatile, and highly readable.
+
+An earth color scheme is an excellent choice for NGOs, as it communicates the organization's connection to nature and the environment. Using colors such as brown, green, and blue creates a warm and inviting palette that reflects the organization's values and mission.
+
+White, grey, and green are commonly used colors for non-governmental organizations (NGOs) due to their associations with certain values and qualities. White is a symbol of purity, cleanliness, and transparency, which are important values for NGOs that strive for accountability and honesty. NGOs often need to build trust with their stakeholders, including donors and beneficiaries, and white can help convey a sense of openness and sincerity.
+
+Grey is a neutral color that can represent balance, maturity, and reliability. For NGOs that deal with complex social issues, grey can help communicate the seriousness and thoughtfulness of their work. Grey can also convey a sense of stability and longevity, which can be reassuring to stakeholders who want to see long-term solutions to social problems.
+
+Green is a color that is often associated with nature, health, and sustainability. For NGOs that work in environmental conservation, public health, or sustainable development, green can be a powerful symbol of their mission. Green can also represent growth, renewal, and hope, which can be inspiring to stakeholders who want to see positive change in the world.
+
 
 ### Surface Plane
 
