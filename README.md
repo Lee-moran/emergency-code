@@ -32,6 +32,10 @@ Support NGOs is a platform created during a five day World NGO Day hackathon to 
 
 ---
 ## User Experience
+Users visit our website to directly witness what is happening in the world regarding NGOs. They are invited to register and establish an account, where they can stay informed by selecting specific causes that align with their interests and values. They can explore ways to support the chosen NGOs, and are encouraged to engage with us through our blogs to stay up-to-date with the latest information and facts about the NGOs. 
+
+Additionally, our website provides a platform for users to connect with various NGOs that they may wish to donate to or volunteer for. Users may be redirected to external websites to make donations or find volunteer opportunities with the chosen NGO. We aim to facilitate a seamless and secure process for users to contribute to causes they care about and make a positive impact on the world.
+
 
 ### Strategy Plane
 
@@ -43,12 +47,16 @@ Support NGOs is a platform created during a five day World NGO Day hackathon to 
 
 ### Fonts and color
 
+<img width="344" alt="fonts" src="https://user-images.githubusercontent.com/92300148/220099180-2caf8ad7-bd1b-4f84-a986-e28012fec4e6.png">
+
 Exo, Roboto, and Montserrat are popular font choices for a variety of design projects due to their versatility and readability.
 Exo is a modern sans-serif font that has a clean and futuristic look, making it suitable for technology-based designs.
-Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials.
-Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel.
+Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials. 
+Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel. 
 
 Additionally, all three fonts have a range of weights and styles that allow for flexibility in design, making them suitable for a variety of projects. Whether it's for a website, logo, or printed material, Exo, Roboto, and Montserrat are excellent choices for designers looking for fonts that are modern, versatile, and highly readable.
+
+<img width="1127" alt="Color scheme" src="https://user-images.githubusercontent.com/92300148/220097748-32f63031-c6df-47ae-a5ca-17ce4c538c26.png">
 
 An earth color scheme is an excellent choice for NGOs, as it communicates the organization's connection to nature and the environment. Using colors such as brown, green, and blue creates a warm and inviting palette that reflects the organization's values and mission.
 
