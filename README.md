@@ -223,6 +223,10 @@ The deployment process should happen smoothly in case all deployment files are f
 ---
 ## Credits
 
+### Media
+
+[Adobe stock](https://stock.adobe.com/)
+
 ---
 
 ## Acknowledgements
