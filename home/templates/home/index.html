@@ -36,59 +36,52 @@
 {% block content %}
     <!-- HOME PAGE HERO AREA -->
     <!-- Credit: JellyPir (https://codepen.io/psyloute/pen/VwbMZvM)  -->
-    <div class="container my-5">
+    <div class="container home-hero">
         <div class="ombre-externe">
             <div class="ombre-interne">
                 <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="{% static 'images/ukraine-pic.png' %}"
-                                class="d-block w-100 peinture-ombre-interne-fine" alt="...">
+                                class="d-block w-100 peinture-ombre-interne-fine" alt="image of a warn-torn city">
                             <div class="carousel-caption">
-                                <p class="carousel-font-sm">
+                                <p class="carousel-font-sm text-white">
                                     The world is not always a pretty picture...
-                                </p>
-                                <p class="carousel-txt-shadow">
                                 </p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'images/support-ukraine-img.png' %}" class="d-block w-100" alt="...">
+                            <img src="{% static 'images/support-ukraine-img.png' %}" class="d-block w-100"
+                                alt="image of two children on a stark war-torn background">
                             <div class="carousel-caption">
                                 <p class="carousel-font">
                                     war
                                 </p>
-                                <p class="carousel-txt-shadow">
-                                </p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'images/syria-appeal.png' %}" class="d-block w-100" alt="...">
+                            <img src="{% static 'images/syria-appeal.png' %}" class="d-block w-100"
+                                alt="image of buildings collapsed into rubbles in Syria after recent earthquake">
                             <div class="carousel-caption">
-                                <p class="carousel-font">
+                                <p class="carousel-font text-red">
                                     natural disasters
                                 </p>
-                                <p class="carousel-txt-shadow">
-                                </p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'images/trash.png' %}" class="d-block w-100" alt="...">
+                            <img src="{% static 'images/trash.png' %}" class="d-block w-100"
+                                alt="image of a coastline littered with rubbish and plastic bottles">
                             <div class="carousel-caption">
-                                <p class="carousel-font-sm">
+                                <p class="carousel-font">
                                     people's folly
                                 </p>
-                                <p class="carousel-txt-shadow">
-                                </p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'images/volunteers.png' %}" class="d-block w-100" alt="...">
+                            <img src="{% static 'images/volunteers.png' %}" class="d-block w-100" alt="image of a group of young volunteers">
                             <div class="carousel-caption">
                                 <p class="carousel-font-sm">
-                                    Let's all try to make a difference.
-                                </p>
-                                <p class="carousel-txt-shadow">
+                                    Find out how YOU can make a difference.
                                 </p>
                             </div>
                         </div>
@@ -109,7 +102,7 @@
     </div>
 
     <!-- FOUR COLUMNS HIGHLIGHTS BAR -->
-    <div class="container-fluid my-4 highlights-bar">
+    <div class="container my-4 highlights-bar">
         <div class="row align-items-start grid-divider">
             <div class="col vertical-line-right">
                 <p class="font-weight-bold h4 text-green">HOW CAN YOU SUPPORT NGOs?</p>
@@ -127,7 +120,7 @@
     </div>
 
     <!-- ABOUT SUPPORT NGO BLURB AREA -->
-    <div class="bg-light my-5">
+    <div class="bg-blurb my-5">
         <div class="featured-post mt-4 pb-5">
             <h3 class="text-center display-4 pt-5">Welcome to Support NGOs.</h3>
             <div class="pt-3">

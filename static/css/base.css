@@ -243,6 +243,10 @@ a {
 
 /* CAROUSEL STYLING */
 /* Credit: JellyPir (https://codepen.io/psyloute/pen/VwbMZvM) */
+.home-hero {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
 .ombre-externe {
     background-color: white;
@@ -260,20 +264,21 @@ a {
     box-shadow: inset 8px 0px 14px -1px rgba(0,0,0,0.4);
 }
 
+.text-red {
+  color: #ff0000;
+}
+
 .carousel-font-sm {
-  font-size:2.5vw;
-  font-family: 'Caveat', cursive;
-  text-shadow: 0px 0px 8px rgba(0, 2, 0, 1);
+  font-size: 3rem;
+  text-shadow: 2px 8px 6px rgba(0,0,0,0.6),
+                    0px -5px 35px rgba(255,255,255,0.3);
 }
 
 .carousel-font {
-    font-size:3vw;
-    font-family: 'Caveat', cursive;
-    text-shadow: 0px 0px 8px rgba(0, 2, 0, 1);
-}
-
-.carousel-txt-shadow {
-    text-shadow: -2px -2px 21px rgba(0, 2, 0, 1);
+    font-size: 5rem;
+    color: #ff0000;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.6),
+                    0px -5px 35px rgba(255,255,255,0.3);
 }
 
 /* -------------------------------- Highlights Section Below Hero Styling */
@@ -300,11 +305,15 @@ a {
 }
 
 /* -------------------------------- Support NGO Blurb Styling */
+.bg-blurb {
+  background-color: #e1e2e7;
+
+}
+
 .featured-post {
   margin-right: 4rem;
   margin-left: 4rem;
 }
-
 
 /* -------------------------------- Categories Cards Styling */
 .card-alt {
@@ -468,6 +477,22 @@ a.category-badge > span.badge:hover {
 
 /* ------------------------------- MEDIA QUERIES */
 @media (max-width: 62px) {
+  .home-hero {
+    margin-top: 2rem;
+  }
+
+  .carousel-font-sm {
+    font-size: 3rem;
+    color: #ff0000;
+    text-shadow: 0px 0px 8px rgba(0, 2, 0, 1);
+  }
+
+  .carousel-font {
+      font-size: 3rem;
+      color: #ff0000;
+      text-shadow: 0px 0px 8px rgba(0, 2, 0, 1);
+  }
+
   .btn-rows {
     display: flex;
     justify-content: space-evenly;
@@ -488,4 +513,18 @@ a.category-badge > span.badge:hover {
   .highlights-bar {
     display: none;
   }
+
+  .btn-rows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem auto;
+  }
+
+  .btn-rows a {
+    display: flex;
+    margin: 0.75rem auto;
+  }
+
 }

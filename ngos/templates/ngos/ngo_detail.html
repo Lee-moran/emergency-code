@@ -47,18 +47,19 @@
             </div>
             <!-- External Link to the NGO's website which opens in another tab -->
             <div class="row p-0 mb-1 ml-3 mb-3">
-                <a href="{{ nongovernmentorg.website }}" class="text-decoration-none text-green"
+                <a href="{{ nongovernmentorg.website }}" class="text-decoration-none text-green text-center"
                     target="_blank" rel="noopener" aria-label="Link to {{ nongovernmentorg.name }}' website">
                     Learn More about {{ nongovernmentorg.friendly_name }}'s work on {{ nongovernmentorg.category }} causes by visiting their site.
                 </a>
             </div>
             <!-- Call to Action intro and rows of buttons -->
             <div class="container-fluid text-center mt-3">
-                <p class="featured-post-intro h5"><em>At SupportNGOs, we believe that every contribution, no matter how small, can make a difference, and we thank you for considering
+                <p class="h5"><em>At SupportNGOs, we believe that every contribution, no matter how small, can make a difference, and we thank you for considering
                     supporting these fantastic organisations.</em>
                 </p>
             </div>
-            <div class="container-fluid btn-rows mt-4 mb-5">
+            <!-- ROWS OF CARDS AS BUTTONS -->
+            <div class="container btn-rows mt-4 mb-5">
                 <a href="{% url 'ngos' %}" class="btn btn-primary btn-alt ml-2 mr-2" role="button">Find More NGOs</a>
                 <a href="https://www.volunteerforever.com/article_post/ngo-volunteer-opportunities-abroad-gain-international-work-experience/"
                     class="btn btn-warning btn-alt ml-2 mr-2" role="button" target="_blank" rel="noopener" aria-label="Link to Volunteer Forever's website">
@@ -71,29 +72,6 @@
                     aria-label="Link to OneCause's website">Help Create Awareness
                 </a>
             </div>
-
-
-
-            <!-- External Link to the NGO's website which opens in another tab -->
-
-            <!-- <a href="https://www.cafonline.org/my-personal-giving/start-giving/donate-now"
-                class="btn btn-sm btn-black text-shadow mt-1 rounded-0">
-                <span class="text-uppercase">Donate to {{ nongovernmentorg.friendly_name }} NOW</span>
-                <span class="icon">
-                    <i class="fas fa-heart"></i>
-                </span>
-            </a>
-
-            <div class="row text-center mt-3">
-                <a href="https://www.cafonline.org/my-personal-giving/start-giving/donate-now" target="_blank" rel="noopener" aria-label="Link to CFA's website"
-                    class="btn btn-outline-black rounded-3 mt-2">
-                        <i class="fas fa-heart"></i><strong class="text-uppercase mr-2">  Donate to {{ nongovernmentorg.friendly_name }} NOW </strong>
-                </a>
-
-
-
-            </div> -->
-
         </div>
     </div>
 
