@@ -2,24 +2,6 @@
 {% load static %}
 
 {% block extra_meta %}
-    <meta name="description" property="og:description" content="">
-    <meta name="keywords" content="Support NGOs, World NGO Day, non-governmental organization">
-
-    {% comment %} Essential Meta Tags for Social Media - Facebook and Twitter {% endcomment %}
-    <meta property="og:title" content="Home | SupportNGOs">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-    <meta property="og:image:alt"
-        content="">
-    <meta property="og:url" content="">
-    <meta name="twitter:card" content="summary_large_image">
-
-    {% comment %} Non-Essential but Recommended Meta Tags {% endcomment %}
-    <meta property="og:description"
-        content="">
-    <meta property="og:site_name" content="Support NGOs">
-    <meta name="twitter:image:alt"
-        content="">
 {% endblock %}
 
 {% block extra_title %}NGOs Need Your Support |{% endblock %}
@@ -37,7 +19,7 @@
         <div class="row">
             <div class="col text-center mt-1">
                 <!-- PAGE HEADING -->
-                <h2 class="display-4 text-black text-center my-5">View All NGOs</h2>
+                <h2 class="display-5 text-black text-center my-5">Support the NGOs working in areas you care most about</h2>
                 <!-- NGOs FILTERING &amp; SORTING AREA -->
                 {% for c in current_categories %}
                 <!-- Dynamically displays category badge based on filtered data passed from a user's navbar click event -->

@@ -1,4 +1,4 @@
-# Emergency Code
+# Hand of Empathy
 ![amiresponsive mockups of SupportNGOs site](./documentation/am-i-responsive.png)</br>
 
 **[Link to the deployed site](https://support-ngo.herokuapp.com/)**
@@ -31,11 +31,6 @@ Support NGOs is a platform created during a five day World NGO Day hackathon to 
 * [Acknoledgements](#acknowledgements)
 
 ---
-## Project Overview
-Hand of Empathy is a multi-brand, ecommerce full stack project built using Django, Python, JavaScript and Bootstrap 4. The site is deployed to Heroku, 
-Hand of Empathy is a RealEstate site that links the consumer to the major NGO catergories. Where a user can select the prefered category donate to that prefered charity. 
-
-
 ## User Experience
 
 ### Strategy Plane
@@ -48,10 +43,10 @@ Hand of Empathy is a RealEstate site that links the consumer to the major NGO ca
 
 ### Fonts and color
 
-Exo, Roboto, and Montserrat are popular font choices for a variety of design projects due to their versatility and readability. 
-Exo is a modern sans-serif font that has a clean and futuristic look, making it suitable for technology-based designs. 
-Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials. 
-Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel. 
+Exo, Roboto, and Montserrat are popular font choices for a variety of design projects due to their versatility and readability.
+Exo is a modern sans-serif font that has a clean and futuristic look, making it suitable for technology-based designs.
+Roboto, on the other hand, is a more traditional sans-serif font with a humanist touch, giving it a more friendly and approachable feel, making it suitable for both digital and print materials.
+Montserrat is a geometric sans-serif font that has a distinctive style with a vintage touch, making it suitable for designs that require a retro or nostalgic feel.
 
 Additionally, all three fonts have a range of weights and styles that allow for flexibility in design, making them suitable for a variety of projects. Whether it's for a website, logo, or printed material, Exo, Roboto, and Montserrat are excellent choices for designers looking for fonts that are modern, versatile, and highly readable.
 
@@ -74,6 +69,19 @@ GitHub Projects was used to manage the development of the site. It helped us bre
 
 * GitHub Projects - in progress
 ![GitHub Projects - progress](./documentation/support-ngos-github-projects-in-progress.png)
+---
+## User Stories
+|USER STORY |	ISSUE ID |	As a/an |	I want to be able to...	| So that I can...|
+| :-------: | :-------: | :-------:| :-----------------------: | :-------------: |
+| 1         |    3      |  Site User    |  View home page      | Know more about website|
+| 2         |    11     | Site User|  view Navbar      |  view content seamlessly |
+| 3         |    6     | Donor  | View catagory of NGO'S | find charity I like to |
+| 4         |    14     | Donor | View individual NGO's details | Know more about their work and how I can help them |
+| 5         |    29     | Site User |  create new account | access all feature of sign up user|
+| 6         |    29     | Site user | sign in  | access  functionality for logged in user|
+| 7         |     8     | Site User | write a blog post | encourage others to donate as well |
+| 8         |    20     | Site User | like a blog post | show my support for those posts that interest me|
+
 
 ---
 ## Features
@@ -125,6 +133,33 @@ GitHub Projects was used to manage the development of the site. It helped us bre
 ---
 
 ## Testing
+### Manual Testing
+1. The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+2. The website was viewed on a variety of devices such as Desktop, Laptop, Samsung9+, etc.
+3. A large amount of testing was done to ensure that all component working properly.
+4. Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### Validator Testing
+
+#### HTML Validation
+I used W3C Markup Validation Service to validate all the HTML files by direct input:
+| Page | Result    | Validation Details & Screenshots  |
+| :---:   | :---: | :---: |
+| index.html |    |    |
+|base.html  |  |  |
+| post_detail.html |   |   |
+| delete_post.htlm |   |   |
+|  blog.html|   |   |
+
+#### CSS Validation
+CSS Validation Service to validate CSS.
+
+![image](https://user-images.githubusercontent.com/91749477/219985706-e9c7a626-5897-4191-8a5e-2cec75c5375b.png)
+
+#### Javascript Validation
+
+#### Python Validation
+
 
 ---
 ## Deployment
@@ -182,6 +217,10 @@ The deployment process should happen smoothly in case all deployment files are f
 
 ---
 ## Credits
+
+### Media
+
+[Adobe stock](https://stock.adobe.com/)
 
 ---
 

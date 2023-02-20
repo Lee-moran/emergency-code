@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from django.http import JsonResponse
 from django.db.models.functions import Lower
 from .models import Category, NonGovernmentOrg
 
@@ -51,7 +50,6 @@ def all_ngos(request):
                 return redirect(reverse('ngos'))
 
             queries = (Q(name__icontains=query) |
-                       Q(category__icontains=query) |
                        Q(description__icontains=query))
             nongovernmentorgs = nongovernmentorgs.filter(queries)
 

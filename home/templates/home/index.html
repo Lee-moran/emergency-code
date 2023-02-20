@@ -5,6 +5,8 @@
     <meta name="description" property="og:description" content="At SupportNGOs, we believe that every contribution, no matter how small,
         can make a difference. We give you the power to choose your causes and the NGOs you'd like to support.">
     <meta name="keywords" content="Support NGOs, World NGO Day, support issues and causes, non-governmental organizations">
+    <meta id="vscode-workbench-auth-session" data-settings="{{WORKBENCH_AUTH_SESSION}}">
+    <meta id="gitpod-ide-capabilities" data-settings="{&quot;service&quot;:true}">
 
     {% comment %} Essential Meta Tags for Social Media - Facebook and Twitter {% endcomment %}
     <meta property="og:title" content="SupportNGOs | Home">
@@ -34,148 +36,135 @@
 {% endblock %}
 
 {% block content %}
-    <!-- CAROUSEL AREA -->
-    <!-- <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{% static 'images/care.webp' %}" class="d-block carousel-img w-100" alt="Syria-Turkey Earthquake appeal">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4 text-red font-weight-bold">Turkey-Syria Earthquake Appeal</h2>
-                    <p>Our planet need our help, let donate to make it a happy home again!</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'images/earthquake.webp' %}" class="d-block carousel-img w-100" alt="Syria-Turkey Earthquake appeal">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4 text-red font-weight-bold">Turkey-Syria Earthquake Appeal</h2>
-                    <p>when disaster strikes it's leave nothing but sorrow, lets help some those who lost everything.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'images/water_ngo.webp' %}" class="d-block carousel-img w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4 text-red font-weight-bold">Emergency Appeal</h2>
-                    <p>We are depleting our natural resources, let use it's time to take some action.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'images/support-ukraine-img.webp' %}" class="d-block carousel-img w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4 text-red font-weight-bold">Ukraine Appeal</h2>
-                    <p>War brings death and destruction, which leave long lasting impact, let's heal some precious hearts...!</p>
+    <!-- HOME PAGE HERO AREA -->
+    <!-- Credit: JellyPir (https://codepen.io/psyloute/pen/VwbMZvM)  -->
+    <div class="container home-hero">
+        <div class="ombre-externe">
+            <div class="ombre-interne">
+                <div id="carouselExampleCaptions" class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/ukraine-pic.png' %}"
+                                class="d-block w-100 peinture-ombre-interne-fine" alt="image of a warn-torn city">
+                            <div class="carousel-caption">
+                                <p class="carousel-font-sm text-white">
+                                    The world is not always a pretty picture...
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/support-ukraine-img.png' %}" class="d-block w-100"
+                                alt="image of two children on a stark war-torn background">
+                            <div class="carousel-caption">
+                                <p class="carousel-font">
+                                    war
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/syria-appeal.png' %}" class="d-block w-100"
+                                alt="image of buildings collapsed into rubbles in Syria after recent earthquake">
+                            <div class="carousel-caption">
+                                <p class="carousel-font text-red">
+                                    natural disasters
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/trash.png' %}" class="d-block w-100"
+                                alt="image of a coastline littered with rubbish and plastic bottles">
+                            <div class="carousel-caption">
+                                <p class="carousel-font">
+                                    people's folly
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/volunteers.png' %}" class="d-block w-100" alt="image of a group of young volunteers">
+                            <div class="carousel-caption">
+                                <p class="carousel-font-sm">
+                                    Find out how YOU can make a difference.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </button>
-    </div> -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="1000">
-            <img src="{% static 'images/care.webp' %}" class="d-block carousel-img w-100" alt="Syria-Turkey Earthquake appeal">
-            <div class="carousel-caption d-none d-md-block">
-                <h2 class="display-4 text-danger fw-bold">Turkey-Syria Earthquake Appeal</h2>
-                <p>Our planet need our help, let donate to make it a happy home again!</p>
-            </div>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="{% static 'images/earthquake.webp' %}" class="d-block carousel-img w-100" alt="Syria-Turkey Earthquake appeal">
-            <div class="carousel-caption d-none d-md-block">
-                <h2 class="display-4 text-danger fw-bold">Emergency Appeal</h2>
-                <p>We are depleting our natural resources, let use it's time to take some action.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="{% static 'images/support-ukraine-img.webp' %}" class="d-block carousel-img w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h2 class="display-4 text-danger fw-bold">Ukraine Appeal</h2>
-                    <p>War brings death and destruction, which leave long lasting impact, let's heal some precious hearts...!</p>
-                </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    <!-- FOUR COLUMNS HIGHLIGHT BAR -->
-    <div class="container mt-4">
+    </div>
+
+    <!-- FOUR COLUMNS HIGHLIGHTS BAR -->
+    <div class="container my-4 highlights-bar">
         <div class="row align-items-start grid-divider">
             <div class="col vertical-line-right">
-                <p class="font-weight-bold h5 text-green">HOW CAN YOU SUPPORT NGOs?</p>
+                <p class="font-weight-bold h4 text-green">HOW CAN YOU SUPPORT NGOs?</p>
             </div>
             <div class="col vertical-line-left">
-                <p class=""><em>Choose the causes and issues that matter the most to you.</em></p>
+                <p><em>Choose the causes and issues that matter the most to you.</em></p>
             </div>
             <div class="col vertical-line-left">
-                <p class=""><em>Find the NGOs doing the critical work in these areas.</em></p>
+                <p><em>Find the NGOs doing the critical work in these areas.</em></p>
             </div>
             <div class="col vertical-line-left">
-                <p class=""><em>Contribute, no matter how small. Donate. Volunteer.</em></p>
+                <p><em>Contribute, no matter how small. Donate. Volunteer.</em></p>
             </div>
         </div>
     </div>
-    <!-- FEATURED POST AREA -->
-    <div class="featured-bg mt-4 pb-5">
-        <h3 class="text-center display-4 pt-5">Welcome to Support NGOs.</h3>
-        <div class="featured-post-intro pt-3">
-            <p class="text-center h5"><em>Our team at SupportNGOs are proud to present a list of non-governmental organisations (NGOs) that are doing
-               amazing work in various fields. We believe that supporting these organisations is essential for a better world,
-               and we want to give you the power to choose which ones you would like to support.</em>
-            </p>
-        </div>
-        <div class="featured-post-body pt-3">
-            <p>Our list includes a wide range of NGOs, covering a variety of causes and issues. We have organisations that focus on education, poverty alleviation,
-                human rights, environmental conservation, and many more. Each of these NGOs is doing critical work to make a positive impact in the world, and
-                we encourage you to explore their missions and learn more about their activities.
-            </p>
-        </div>
-        <div class="featured-post-body pt-2">
-            <p>At this stage, we understand that you may not be able to support every NGO on our list. However, we encourage you to choose the organisations that
-                reasonate with you and that you believe are doing important work. Once you have made your selection, we will provide you with information on
-                how you can donate to them directly.
-            </p>
-        </div>
-        <div class="featured-post-body pt-">
-            <p>By giving you the power to choose which NGOs you want to support, we hope to inspire you to take an active role in making a positive impact in the world.
-                We believe that every contribution, no matter how small, can make a difference, and we thank you for considering supporting these fantastic organisations.
-            </p>
-        </div>
-        <div class="featured-post-closing pt-3">
-            <p class="h5 font-weight-bold text-green"><em>And remember, supporting these NGOs is not only a great way to give back to the world, but it's also a great excuse
-                to avoid the guilt of not using that gym membership! Jokes aside, we hope you find an NGO that speaks to your heart and that you can contribute to their mission.
-                Let's make the world a better place, one donation at a time!</em>
-            </p>
+
+    <!-- ABOUT SUPPORT NGO BLURB AREA -->
+    <div class="bg-blurb my-5">
+        <div class="featured-post mt-4 pb-5">
+            <h3 class="text-center display-4 pt-5">Welcome to Support NGOs.</h3>
+            <div class="pt-3">
+                <p class="text-center h5"><em>Our team at SupportNGOs are proud to present a list of non-governmental organisations (NGOs) that are doing
+                amazing work in various fields. We believe that supporting these organisations is essential for a better world,
+                and we want to give you the power to choose which ones you would like to support.</em>
+                </p>
+            </div>
+            <div class="pt-3">
+                <p>Our list includes a wide range of NGOs, covering a variety of causes and issues. We have organisations that focus on education, poverty alleviation,
+                    human rights, environmental conservation, and many more. Each of these NGOs is doing critical work to make a positive impact in the world, and
+                    we encourage you to explore their missions and learn more about their activities.
+                </p>
+            </div>
+            <div class="pt-2">
+                <p>At this stage, we understand that you may not be able to support every NGO on our list. However, we encourage you to choose the organisations that
+                    reasonate with you and that you believe are doing important work. Once you have made your selection, we will provide you with information on
+                    how you can donate to them directly.
+                </p>
+            </div>
+            <div class="pt-">
+                <p>By giving you the power to choose which NGOs you want to support, we hope to inspire you to take an active role in making a positive impact in the world.
+                    We believe that every contribution, no matter how small, can make a difference, and we thank you for considering supporting these fantastic organisations.
+                </p>
+            </div>
+            <div class="pt-3">
+                <p class="h5 font-weight-bold text-green"><em>And remember, supporting these NGOs is not only a great way to give back to the world, but it's also a great excuse
+                    to avoid the guilt of not using that gym membership! Jokes aside, we hope you find an NGO that speaks to your heart and that you can contribute to their mission.
+                    Let's make the world a better place, one donation at a time!</em>
+                </p>
+            </div>
         </div>
     </div>
+
     <!-- NGO CATEGORIES AREA -->
     <div class="text-center mt-5 pt-1">
-        <h3 class="display-4 pb-3">Find the NGOs You Wish to Support</h3>
+        <h3 class="display-4 pb-3">Find the NGOs You Wish to Support.</h3>
+        <h4 class="pb-4 h3">As they work on causes that matter to you the most.</h4>
     </div>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 mx-3 my-3 pb-5">
         {% for category in categories %}
-            <div class="col mb-4">
+            <div class="col mb-3">
                 <div class="card h-100 card-alt card-alt-transition">
                     <a href="{% url 'ngos' %}?category={{ category.name }}">
                         <div class="card-body">
@@ -186,6 +175,4 @@
             </div>
         {% endfor %}
     </div>
-
-
 {% endblock %}
