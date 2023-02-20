@@ -40,6 +40,7 @@ a {
 /* ------------------------------------------------------- NavBar  */
 .nav-item {
 margin: 0 0.2rem;
+text-align: center;
 }
 
 .nav-link {
