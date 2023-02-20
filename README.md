@@ -42,10 +42,12 @@ Additionally, our website provides a platform for users to connect with various 
 ### Scope Plane
 
 ### Structure Plane
+<img width="1135" alt="ERD" src="https://user-images.githubusercontent.com/92300148/220120363-46f2bbde-2ffe-4a73-8d26-7186b60fed7f.png">
 
 ### Skeleton Plane
 
-### Fonts and color
+### Surface Plane
+## Fonts and color
 
 <img width="344" alt="fonts" src="https://user-images.githubusercontent.com/92300148/220099180-2caf8ad7-bd1b-4f84-a986-e28012fec4e6.png">
 
@@ -66,8 +68,6 @@ Grey is a neutral color that can represent balance, maturity, and reliability. F
 
 Green is a color that is often associated with nature, health, and sustainability. For NGOs that work in environmental conservation, public health, or sustainable development, green can be a powerful symbol of their mission. Green can also represent growth, renewal, and hope, which can be inspiring to stakeholders who want to see positive change in the world.
 
-
-### Surface Plane
 
 ---
 ## Agile Methodology
@@ -93,7 +93,15 @@ GitHub Projects was used to manage the development of the site. It helped us bre
 
 ---
 ## Features
+Our website offers several features designed to enhance the user experience. Upon visiting our website, users have the option to sign up and register for an account, which creates a profile unique to their interests and preferences. Users can customize their profiles and stay up-to-date on their selected causes and NGOs.
 
+The website also allows users to read and publish blogs related to the NGOs and causes they care about. Through our blog platform, users can interact with other members of the community by leaving comments and sharing their thoughts and opinions.
+
+For added convenience, our website includes a logout function, allowing users to securely and easily log out of their accounts. Additionally, we provide buttons that redirect users to external sites where they can donate or volunteer for the chosen NGO.
+
+we also offer a "like" feature for our users. This feature allows users to show their appreciation for blog posts, comments, and other content on our website. It can also be used by users to stay up to date with their chosen NGO. By liking posts related to a specific NGO. This feature helps users stay informed about the latest developments regarding their chosen NGO, and encourages them to stay engaged with the cause over time.
+
+Overall, our website aims to provide a comprehensive and user-friendly platform for individuals to connect with NGOs and make a positive impact on the world.
 ---
 ## Technologies Used
 ### **Languages Used**
@@ -162,12 +170,11 @@ I used W3C Markup Validation Service to validate all the HTML files by direct in
 #### CSS Validation
 CSS Validation Service to validate CSS.
 
-![image](https://user-images.githubusercontent.com/91749477/219985706-e9c7a626-5897-4191-8a5e-2cec75c5375b.png)
+<img width="1136" alt="css" src="https://user-images.githubusercontent.com/92300148/220120275-75d9ac17-7a1e-4ffc-b14c-4020d8176a5d.png">
 
 #### Javascript Validation
 
 #### Python Validation
-
 
 ---
 ## Deployment
