@@ -1,4 +1,4 @@
-# Emergency Code
+# Hand of Empathy
 ![amiresponsive mockups of SupportNGOs site](./documentation/am-i-responsive.png)</br>
 
 **[Link to the deployed site](https://support-ngo.herokuapp.com/)**
@@ -74,6 +74,19 @@ GitHub Projects was used to manage the development of the site. It helped us bre
 
 * GitHub Projects - in progress
 ![GitHub Projects - progress](./documentation/support-ngos-github-projects-in-progress.png)
+---
+## User Stories
+|USER STORY |	ISSUE ID |	As a/an |	I want to be able to...	| So that I can...|
+| :-------: | :-------: | :-------:| :-----------------------: | :-------------: |
+| 1         |    3      |  Site User    |  View home page      | Know more about website|
+| 2         |    11     | Site User|  view Navbar      |  view content seamlessly |
+| 3         |    6     | Donor  | View catagory of NGO'S | find charity I like to |
+| 4         |    14     | Donor | View individual NGO's details | Know more about their work and how I can help them |
+| 5         |    29     | Site User |  create new account | access all feature of sign up user|
+| 6         |    29     | Site user | sign in  | access  functionality for logged in user|
+| 7         |     8     | Site User | write a blog post | encourage others to donate as well |
+| 8         |    20     | Site User | like a blog post | show my support for those posts that interest me|
+
 
 ---
 ## Features
@@ -133,7 +146,7 @@ GitHub Projects was used to manage the development of the site. It helped us bre
 
 ### Validator Testing
 
-#### HTML
+#### HTML Validation
 I used W3C Markup Validation Service to validate all the HTML files by direct input:
 | Page | Result    | Validation Details & Screenshots  |
 | :---:   | :---: | :---: |
@@ -142,6 +155,16 @@ I used W3C Markup Validation Service to validate all the HTML files by direct in
 | post_detail.html |   |   |
 | delete_post.htlm |   |   |
 |  blog.html|   |   |
+
+#### CSS Validation
+CSS Validation Service to validate CSS.
+
+![image](https://user-images.githubusercontent.com/91749477/219985706-e9c7a626-5897-4191-8a5e-2cec75c5375b.png)
+
+#### Javascript Validation
+
+#### Python Validation
+
 
 ---
 ## Deployment
