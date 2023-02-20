@@ -475,6 +475,16 @@ a.category-badge > span.badge:hover {
   z-index: 100;
 }
 
+/* ------------------------------- 404 and 500 ERROR PAGES STYLING */
+.error-pages-bg {
+    background-image: url('/media/error-pages-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 48rem;
+    width: 100%;
+}
+
 /* ------------------------------- MEDIA QUERIES */
 @media (max-width: 62px) {
   .home-hero {
